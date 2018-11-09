@@ -66,6 +66,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: white;
+  transition: all 0.3s;
 }
 
 #header .menu ul li .dernierlien {
@@ -78,6 +79,11 @@ body {
   background-color: #4e9ba0;
   color: white;
 }
+
+#header .menu ul li .dernierlien:hover {
+  background-color: #4573b4;
+}
+
 
 #contenu {
   padding: 10px 0;
