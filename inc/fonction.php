@@ -22,12 +22,50 @@ function isLogged()
    return false;
 }
 
-function isAdmin($nomSession, $aSession, $bSession, $cSession, $dSession, $eSession)
+function isLoggedD($nomSession, $aSession, $bSession, $cSession, $dSession, $eSession)
 {
-  if (isLogged()) {
+  if (!empty($_SESSION[$nomSession][$aSession])) {
+    if (!empty($_SESSION[$nomSession][$bSession])) {
+      if (!empty($_SESSION[$nomSession][$cSession])) {
+        if (!empty($_SESSION[$nomSession][$dSession])) {
+          if (!empty($_SESSION[$nomSession][$eSession])) {
+            return TRUE;
+          }
+        }
+      }
+    }
+  }
+  return FALSE;
+}
+
+function isAdminD($nomSession, $aSession, $bSession, $cSession, $dSession, $eSession)
+{
+  if (isLoggedD($nomSession, $aSession, $bSession, $cSession, $dSession, $eSession)) {
     if ($_SESSION[$nomSession][$dSession] == 'admin') {
       return TRUE;
     }
   }
   return FALSE;
-}  ?>
+}
+
+function verifTexteFormulaire($errors, $champ, $min, $max, $key) {
+
+  //validation du formulaire (auteur)
+  if(!empty($champ)) {
+    $nbCharChamp = strlen($champ);
+    if ($nbCharChamp >= $min && $nbCharChamp <= $max) {
+      // code...
+    }
+    elseif ($nbCharChamp < $min) {
+      $errors[$key] = 'Veuillez écrire au moins ' . $min . ' caractères.';
+    }
+    elseif ($nbCharChamp > $max) {
+      $errors[$key] = 'Veuillez écrire moins de ' . $max . ' caractères.';
+    }
+  }
+  else {
+    $errors[$key] = 'Veuillez renseigner ce champ.';
+  }
+
+  return $errors;
+}
