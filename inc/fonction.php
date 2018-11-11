@@ -1,4 +1,14 @@
 <?php
+function br() {
+echo '<br>';
+}
+
+function debug($array) {
+  echo '<pre>';
+  print_r($array);
+  echo '</pre>';
+}
+
 
 //fonction pour generer un token
 function generateRandomString($length = 10) {
