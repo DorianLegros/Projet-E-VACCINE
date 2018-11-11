@@ -38,7 +38,7 @@
         'ip' => $_SERVER['REMOTE_ADDR']
       );
       print_r($_SESSION);
-      header('Location:index.php');
+      header('Location:carnet.php');
     }
 
   }
@@ -49,7 +49,7 @@
   <div class="clear"></div>
   <!-- formulaire de connexion -->
   <div class="wrap">
-  <form action="" class="connexion">
+  <form action="" class="connexion" method="post">
     <h2 >Connexion</h2>
     <div class="container">
 

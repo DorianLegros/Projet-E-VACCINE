@@ -1,4 +1,5 @@
 <?php
+
 function debug($array)
 {
   echo '<pre>';

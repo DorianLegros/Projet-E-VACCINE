@@ -74,6 +74,7 @@
         </p>
       </div>
     </div>
+    <a href="admin/dashboard.php">Admin</a>
   </div>
 </section>
 
