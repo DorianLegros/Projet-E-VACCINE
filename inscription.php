@@ -1,4 +1,4 @@
-<?php include('inc/pdo.php'); ?>
+<?php include('pdo.php'); ?>
 <?php include('inc/fonction.php'); ?>
 <?php
 $error = array();
@@ -72,17 +72,18 @@ if(count($error) == 0) {
   $token = generateRandomString(120);
   // insert into
 
-  $sql = "INSERT INTO v2_user (login,email,token,mdp,status,created_at)
-          VALUES (:mdp,:email,'$token',:mdp,'user', NOW())";
+  $sql = "INSERT INTO v2_user (login,email,mdp,status,token,created_at)
+          VALUES (:login,:email,:mdp,'user','$token', NOW())";
   $query = $pdo->prepare($sql);
-  $query->bindValue(':pseudo',$login,PDO::PARAM_STR);
-  $query->bindValue(':mail',$email,PDO::PARAM_STR);
-  $query->bindValue(':password',$hash,PDO::PARAM_STR);
+  $query->bindValue(':login',$login,PDO::PARAM_STR);
+  $query->bindValue(':email',$email,PDO::PARAM_STR);
+  $query->bindValue(':mdp',$hash,PDO::PARAM_STR);
   $query->execute();
   die('good');
 
 }
 }
+
 debug($error);
 
 ?>
@@ -110,13 +111,13 @@ debug($error);
     <input type="password" placeholder="Confirmer votre mot de passe" name="mdp2" value="" >
     <p>J'ai lu et j'accepte les <a href="#">Terms & Conditions</a>.</p>
 
+    <div class="container">
+     <input type="submit" name="submitted" class="signup" value="S'inscrire"></input>
 
-    <div class="clearfix">
-      <a href="connexion.php"><input type="button" class="cancelbtn">Connexion</input></a>
-      <input type="submit" name ="submitted" class="signupbtn">S'inscrire</input>
-    </div>
+   </div>
   </div>
 </form>
+     <a href="connexion.php"><input type="submit" name="submit" class="signup" value="Se connecter"></input></a>
 </div>
 
 <?php include('inc/footer.php'); ?>
