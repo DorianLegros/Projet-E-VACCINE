@@ -10,7 +10,7 @@
     <header id="header">
       <div class="wrap">
         <div class="logo">
-          <a href="#"><img src="asset/img/logo.png" alt="Logo E-VACCINE"></a>
+          <a href="index.php"><img src="asset/img/logo.png" alt="Logo E-VACCINE"></a>
         </div>
         <div class="titre">
           <h1>Parce que votre santé</h1>
@@ -20,9 +20,9 @@
         <nav class="menu">
           <ul>
             <li><a href="index.php">Accueil</a></li>
-            <li><a href="#">Vaccins</a></li>
-            <li><a href="#">Informations</a></li>
-            <li><a href="#" class="dernierlien">Connexion</a></li>
+            <li><a href="vaccins.php">Vaccins</a></li>
+            <li><a href="">Informations</a></li>
+            <li><a href="connexion.php" class="dernierlien">Connexion</a></li>
           </ul>
         </nav>
       </div>
