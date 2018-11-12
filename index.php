@@ -74,11 +74,8 @@
         </p>
       </div>
     </div>
-    <a href="admin/dashboard.php">Admin</a>
   </div>
 </section>
-
-<?php  print_r($_SESSION) ?>
 
 <?php
     include('inc/footer.php');

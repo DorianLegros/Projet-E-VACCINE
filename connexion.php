@@ -42,7 +42,7 @@ if(!empty($_POST['remember'])) {
         'ip' => $_SERVER['REMOTE_ADDR']
       );
       // print_r($_SESSION);
-      header('Location: carnet.php');
+      header('Location: index.php');
     }
 
   }

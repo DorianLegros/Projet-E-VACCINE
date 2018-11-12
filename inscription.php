@@ -15,10 +15,10 @@ if (!empty($_POST['submitted'])) {
   //login
   if(!empty($login)){
     if(strlen($login)<3){
-      $error['login']='votre identifiant est court';
+      $error['login']='Votre identifiant est trop court (3 car. minimum).';
 
     }elseif (strlen($login)>30) {
-      $error['login']='votre identifiant est long';
+      $error['login']='Votre identifiant est trop long (30 car. maximum).';
     }else {
       //requete sql
       $sql = "SELECT login FROM v2_user WHERE login = :login";
@@ -27,7 +27,7 @@ if (!empty($_POST['submitted'])) {
       $query->execute();
       $userLogin = $query->fetch();
       if(!empty($userLogin)) {
-        $error['login'] = 'Cet identifient existe déjà';
+        $error['login'] = 'Cet identifiant existe déjà';
       }
 
     }
@@ -47,7 +47,7 @@ if (!empty($_POST['submitted'])) {
       $query->execute();
       $userEmail = $query->fetch();
       if(!empty($userEmail)) {
-          $error['email'] = 'email déjà utilisé';
+          $error['email'] = 'Adresse email déjà utilisé';
       }
     }
 } else {
@@ -57,20 +57,20 @@ if (!empty($_POST['submitted'])) {
 // mot de passe
 if(!empty($mdp) && !empty($mdp2)) {
       if($mdp != $mdp2) {
-        $error['mdp'] = 'Vos mot de passe sont différents';
+        $error['mdp'] = 'Vos mot de passe sont différents.';
       } elseif(strlen($mdp) < 5 ) {
-        $error['mdp'] = 'Votre mot de passe est trop court';
+        $error['mdp'] = 'Votre mot de passe est trop court (5 car. minimum).';
+      } elseif(strlen($mdp) > 255 ) {
+        $error['mdp'] = 'Votre mot de passe est trop court (255 car. maximum).';
       }
 } else {
-  $error['mdp'] = 'Veuillez renseigner un password';
+  $error['mdp'] = 'Veuillez renseigner un mot de passe.';
 }
 
 //vérification si la case est cochée
-if(!empty($_POST['check'])){
-    $error['check'] = 'Vous avez coché la case';}
-else{
-   $error['check'] = 'Vous n\'avez pas coché la case';
-}
+if(empty($_POST['check'])){
+    $error['check'] = 'Vous n\'avez pas coché la case.';}
+
 
 
 // Si pas d'erreur j'insert dans la base de donnée
@@ -87,12 +87,10 @@ if(count($error) == 0) {
   $query->bindValue(':email',$email,PDO::PARAM_STR);
   $query->bindValue(':mdp',$hash,PDO::PARAM_STR);
   $query->execute();
-  die('good');
+  header('Location: index.php');
 
+  }
 }
-}
-
-debug($error);
 
 ?>
 
@@ -106,17 +104,20 @@ debug($error);
 
     <label for="login">Identifiant</label>
     <span class="error"><?php if(!empty($error['login'])) {echo $error['login']; }  ?></span>
-    <input type="text" placeholder="Entrer votre identifiant" name="login" value="<?php if(!empty($_POST['login'])) { echo $_POST['login']; } ?>" >
+    <input type="text" placeholder="Entrez votre identifiant" name="login" value="<?php if(!empty($_POST['login'])) { echo $_POST['login']; } ?>" >
 
     <label for="email">Email</label>
     <span class="error"><?php if(!empty($error['email'])) {echo $error['email']; }  ?></span>
     <input type="text" placeholder="exemple@gmail.com" name="email" value="<?php if(!empty($_POST['email'])) { echo $_POST['email']; } ?>">
 
     <label for="mdp">Mot de passe</label>
+    <span class="error"><?php if(!empty($error['mdp'])) {echo $error['mdp']; }  ?></span>
     <input type="password" placeholder="Entrer votre mot de passe" name="mdp" value="" >
 
     <label for="mdp2">Confirmer le mot de passe</label>
     <input type="password" placeholder="Confirmer votre mot de passe" name="mdp2" value="" >
+
+    <span class="error"><?php if(!empty($error['check'])) {echo $error['check']; }  ?></span>
     <input type="checkbox" name="check">J'ai lu et j'accepte les <a href="#">Terms & Conditions</a>.</input>
 
     <div class="container">

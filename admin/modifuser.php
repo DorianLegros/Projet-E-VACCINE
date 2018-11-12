@@ -5,7 +5,7 @@
 <?php
 $errors = array();
 
-if (!empty($_GET['id'] && is_numeric($_GET['id']))) {
+if (!empty($_GET['id'] && is_numeric($_GET['id'])) && $_GET['id'] != 2) {
   $id = $_GET['id'];
   $idVaccin = trim(strip_tags($_GET['id']));
   $sql = "SELECT * FROM v2_user WHERE id = $id";
