@@ -38,7 +38,7 @@
         'ip' => $_SERVER['REMOTE_ADDR']
       );
       print_r($_SESSION);
-      header('Location:carnet.php');
+      //header('Location:carnet.php');
     }
 
   }
