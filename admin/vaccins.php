@@ -34,7 +34,7 @@ $tableVaccins = $query -> fetchAll();
                 <td><?= $tableVaccin['importance'] ?></td>
                 <td><?= $tableVaccin['created_at'] ?></td>
                 <td><a href="#">Modifier</a></td>
-                <td><a href="#">Supprimer</a></td>
+                <td><a href="supprvaccin.php?id=<?= $tableVaccin['id']; ?>">Supprimer</a></td>
               </tr>
             <?php } ?>
             </table>

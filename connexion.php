@@ -30,7 +30,7 @@
             // cookie
 
 if(!empty($_POST['remember'])) {
-  setcookie('login_id', $login->id, time() + 3600 * 24 * 3);
+  setcookie('auth', $user['id'] . '-----' . sha1($user['login'] . $user['mdp']), time() + 3600 * 24 * 3, '/', 'localhost', false, true);
 }
 
     if(count($error) == 0) {
@@ -42,7 +42,7 @@ if(!empty($_POST['remember'])) {
         'ip' => $_SERVER['REMOTE_ADDR']
       );
       // print_r($_SESSION);
-      header('Location:carnet.php');
+      header('Location: carnet.php');
     }
 
   }
@@ -66,7 +66,7 @@ if(!empty($_POST['remember'])) {
       <input type="password" placeholder="Entrer votre mot de passe" name="mdp" >
 
       <div class="container">
-        <label><input type="checkbox" name="remember" value="">Se souvenir de moi</label>
+        <label><input type="checkbox" name="remember" value="yes">Se souvenir de moi</label>
        <input type="submit" name="submitted" class="signup" value="Se connecter"></input>
 
        <span class="psw"><a href="forgotten_pass.php">Mot de passe oublié?</a></span>
