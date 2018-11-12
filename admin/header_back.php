@@ -47,7 +47,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+                <a class="navbar-brand" href="../index.php">SB Admin v2.0</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -59,7 +59,11 @@
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
+<<<<<<< HEAD
                         <li><a href="../index.php"><i class="fa fa-desktop fa-fw"></i> Site client</a>
+=======
+                        <li><a href="../index.php"><i class="fa fa-desktop fa-fw"></i>Site client</a>
+>>>>>>> 35c324f1b447fcad1c904a8d7b2852e07bbf4c69
                         </li>
                         <li class="divider"></li>
                         <li><a href="../deconnexion.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
@@ -90,10 +94,10 @@
                         </li>
 
                         <li>
-                            <a href="utilisateurs.php"><i class="fa fa-table fa-fw"></i>Utilisateurs</a>
+                            <a href="utilisateurs.php"><i class="fa fa-users fa-fw"></i>Utilisateurs</a>
                         </li>
                         <li>
-                            <a href="vaccins.php"><i class="fa fa-edit fa-fw"></i>Vaccins</a>
+                            <a href="vaccins.php"><i class="fa fa-folder-open fa-fw"></i>Vaccins</a>
                         </li>
 
                     </ul>
@@ -107,4 +111,7 @@
             else {
                 header('Location: ../403.php');
             }
+<<<<<<< HEAD
       ?>
+=======
+>>>>>>> 35c324f1b447fcad1c904a8d7b2852e07bbf4c69

@@ -153,6 +153,57 @@ body {
   margin: 10px 0;
 }
 
+/* style tableau vaccins */
+table.table {
+  font-family: verdana, arial, sans-serif;
+  font-size: 11px;
+  color: #333333;
+  border-width: 1px;
+  border-color: #3A3A3A;
+  border-collapse: collapse;
+}
+
+table.table th {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #517994;
+  background-color: #B2CFD8;
+}
+
+table.table td {
+  background-color: #DFEBF1;
+}
+
+table.table td {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #517994;
+  background-color: #ffffff;
+}
+table.table .barre1 {
+   width:100px;
+   height: 10px;
+   border:1px;
+   background-color: yellow;
+}
+table.table .barre2 {
+   width:100px;
+   height: 10px;
+   border:1px;
+   background-color: orange;
+}
+table.table .barre3 {
+   width:100px;
+   height: 10px;
+   border:1px;
+   background-color: red;
+}
+
+
+
+
 form {border:3px solid #ccc;  margin-top:50px;margin-bottom: 50px;border-radius: 3%;}
 h2 {text-align: center; padding-top: 10px; font-weight: bold; font-size: 1.3em;}
 input[type=text], input[type=password] {
@@ -220,7 +271,7 @@ input[type=text]:focus, input[type=password]:focus {
     clear: both;
     display: table;
 }
-
+/* style pour la page vaccins */
 /* footer */
 #footer {
   height: 160px;

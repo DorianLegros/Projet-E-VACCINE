@@ -26,7 +26,7 @@ $tableVaccins = $query -> fetchAll();
             <!-- /.col-lg-12 -->
             <table class="table">
               <tr>
-                <th>User</th>
+                <th>Pseudo</th>
                 <th>Email</th>
                 <th>Role</th>
                 <th>Membre depuis</th>
@@ -38,7 +38,7 @@ $tableVaccins = $query -> fetchAll();
                 <td><?= $tableUser['email']; ?></td>
                 <td><?= $tableUser['status'] ?></td>
                 <td><?= $tableUser['created_at'] ?></td>
-                <td><a href="#">Modifier</a></td>
+                <td><a href="modifuser.php?id=<?= $tableUser['id']; ?>">Modifier</a></td>
                 <td><a href="suppruser.php?id=<?= $tableUser['id']; ?>">Supprimer</a></td>
               </tr>
             <?php } ?>
@@ -59,9 +59,9 @@ $tableVaccins = $query -> fetchAll();
               <tr>
                 <td><?= $tableVaccin['nomvaccin']; ?></td>
                 <td><?= $tableVaccin['description']; ?></td>
-                <td><?= $tableVaccin['importance'] ?></td>
-                <td><?= $tableVaccin['created_at'] ?></td>
-                <td><a href="#">Modifier</a></td>
+                <td><?= $tableVaccin['importance']; ?></td>
+                <td><?= $tableVaccin['created_at']; ?></td>
+                <td><a href="modifvaccin.php?id=<?= $tableVaccin['id']; ?>">Modifier</a></td>
                 <td><a href="supprvaccin.php?id=<?= $tableVaccin['id']; ?>">Supprimer</a></td>
               </tr>
             <?php } ?>

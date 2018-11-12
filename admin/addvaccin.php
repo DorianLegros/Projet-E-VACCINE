@@ -15,14 +15,21 @@
     $errors=verifTexteFormulaire($errors, $nomVaccin, 3, 255, 'nomvac');
     $errors=verifTexteFormulaire($errors, $descriptionVaccin, 3, 5000, 'descvac');
 
+    $sql = "SELECT * FROM v2_vaccins WHERE nomvaccin = '$nomVaccin'";
+    $query = $pdo -> prepare($sql);
+    $query -> execute();
+    $verifNomVaccin = $query -> fetch();
+    if(!empty($verifNomVaccin)){
+      $errors['nomvac'] = "Veuillez ne pas utiliser un nom de vaccin déjà existant.";
+    }
+
 
     if(count($errors) == 0) {
-      $sql = "INSERT INTO v2_vaccins (nomvaccin, description, importance, created_at) VALUES (:Nom, :Description, 'importanceVaccin', NOW())";
+      $sql = "INSERT INTO v2_vaccins (nomvaccin, description, importance, created_at) VALUES (:Nom, :Description, '$importanceVaccin', NOW())";
       $query = $pdo -> prepare($sql);
       $query -> bindValue(':Nom', $nomVaccin, pdo::PARAM_STR);
       $query -> bindValue(':Description', $descriptionVaccin, pdo::PARAM_STR);
       $query -> execute();
-      echo '';
     }
   }
 ?>
@@ -39,9 +46,9 @@
               <li><label for="nomvac">Nom: </label><input type="text" name="nomvac" value="<?php if(!empty($_POST['nomvac'])){echo $_POST['nomvac'];} ?>"> <div class="erreur"><?php if (!empty($errors['nomvac'])) { echo $errors['nomvac']; } ?> </div></li>
               <li><label for="descvac">Description: </label><textarea name="descvac" rows="8" cols="80"><?php if(!empty($_POST['descvac'])){echo $_POST['descvac'];} ?></textarea> <div class="erreur"><?php if (!empty($errors['descvac'])) { echo $errors['descvac']; } ?></div></li>
               <li><label for="importancevac">Importance</label><select class="" name="importancevac">
-                <option value="1">Facultatif</option>
-                <option value="2">Recommandé</option>
-                <option value="3">Obligatoire</option>
+                <option value="facultatif">Facultatif</option>
+                <option value="recommandé">Recommandé</option>
+                <option value="obligatoire">Obligatoire</option>
               </select> <div class="erreur"><?php if (!empty($errors['auteur'])) { echo $errors['auteur']; } ?> </div></li>
               <li><input type="submit" name="submitted" value="Valider"> </li>
             </ul>
