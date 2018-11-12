@@ -26,11 +26,11 @@
             <tr>
                 <td><?php echo $vaccin['nomvaccin']; ?></td>
                 <td><?php echo $vaccin['description']; ?></td>
-                <td><?php if ($vaccin['importance']='facutatif'){ ?>
+                <td><?php if ($vaccin['importance']=='facutatif'){ ?>
                   <div class="barre1"></div>
-                <?php } elseif($vaccin['importance']='recommandé'){ ?>
+                <?php } elseif($vaccin['importance'] =='recommandé'){ ?>
                   <div class="barre2"></div><?php }
-                                elseif($vaccin['importance']='obligatoire'){ ?>
+                                elseif($vaccin['importance']== 'obligatoire'){ ?>
                                   <div class="barre3"></div>
                         <?php }; ?></td>
             </tr>

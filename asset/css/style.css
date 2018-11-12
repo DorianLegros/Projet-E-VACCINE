@@ -187,24 +187,7 @@ table.table td {
   border-color: #517994;
   background-color: #ffffff;
 }
-table.table .barre1 {
-   width:100px;
-   height: 10px;
-   border:1px;
-   background-color: yellow;
-}
-table.table .barre2 {
-   width:100px;
-   height: 10px;
-   border:1px;
-   background-color: orange;
-}
-table.table .barre3 {
-   width:100px;
-   height: 10px;
-   border:1px;
-   background-color: red;
-}
+
 
 
 form {border:3px solid #ccc;  margin-top:50px;margin-bottom: 50px;border-radius: 3%;}
