@@ -62,10 +62,10 @@ if (!empty($_GET['email']) && !empty($_GET['token'])) {
 
 <form class="new_password" action="" method="post">
   <label for="">Nouveau mot de passe *</label>
-  <input type="text" name="mdp" value="">
+  <input type="password" name="mdp" value="">
 
   <label for="">Vonfirmer votre nouveau mot de passe *</label>
-  <input type="text" name="mdp2" value="">
+  <input type="password" name="mdp2" value="">
 
   <input type="submit" name="submitted" value="Confirmer">
 </form>
