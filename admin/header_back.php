@@ -1,4 +1,5 @@
-<?php if(isAdminD('user', 'id', 'pseudo', 'email', 'status', 'ip')) { ?>
+
+<?php if(isAdminD('user', 'id', 'login', 'email', 'status', 'ip')) { ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +47,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+                <a class="navbar-brand" href="../index.php">SB Admin v2.0</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -106,4 +107,3 @@
             else {
                 header('Location: ../403.php');
             }
-      ?>

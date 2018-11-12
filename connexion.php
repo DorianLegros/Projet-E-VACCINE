@@ -10,13 +10,13 @@
 
     //faille xss
     $login    = trim(strip_tags($_POST['login']));
-    $mdp = trim(strip_tags($_POST['mdp']));
+    $mdp      = trim(strip_tags($_POST['mdp']));
 
     //verification login/password existant
 
     $sql = "SELECT * FROM v2_user WHERE  login = :login OR email = :login";
           $query = $pdo -> prepare($sql);
-          $query -> bindValue(':login', $login);
+          $query -> bindValue(':login', $login, PDO :: PARAM_STR);
           $query -> execute();
     $user = $query -> fetch();
 
@@ -27,22 +27,26 @@
     }else{
     $error['login'] = 'Veuillez vous inscrire';
     }
+            // cookie
 
+if(!empty($_POST['remember'])) {
+  setcookie('login_id', $login->id, time() + 3600 * 24 * 3);
+}
 
     if(count($error) == 0) {
       $_SESSION['user'] = array(
         'id' => $user['id'],
         'login' => $user['login'],
         'email' => $user['email'],
-        'role' => $user['status'],
+        'status' => $user['status'],
         'ip' => $_SERVER['REMOTE_ADDR']
       );
-      print_r($_SESSION);
-      //header('Location:carnet.php');
+      // print_r($_SESSION);
+      header('Location:carnet.php');
     }
 
   }
-  debug($error);
+  // debug($error);
   ?>
 
   <?php include('inc/header.php'); ?>
@@ -62,9 +66,10 @@
       <input type="password" placeholder="Entrer votre mot de passe" name="mdp" >
 
       <div class="container">
+        <label><input type="checkbox" name="remember" value="">Se souvenir de moi</label>
        <input type="submit" name="submitted" class="signup" value="Se connecter"></input>
 
-       <span class="psw">Mot de passe <a href="forgotten_pass">oublié?</a></span>
+       <span class="psw"><a href="forgotten_pass.php">Mot de passe oublié?</a></span>
      </div>
     </div>
   </form>

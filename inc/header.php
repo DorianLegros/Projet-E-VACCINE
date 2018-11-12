@@ -22,9 +22,16 @@
             <li><a href="index.php">Accueil</a></li>
             <li><a href="vaccins.php">Vaccins</a></li>
             <li><a href="#">Informations</a></li>
-            <li><a href="inscription.php" class="dernierlien">Connexion</a></li>
+
+            <?php if(isLogged()) {?>
+            <li><a href="deconnexion.php" class="dernierlien">Deconnexion</a></li>
+            <li class="messageAcceuil">Bonjour <?= $_SESSION['user']['login']; ?></span></li>
+          <?php } else { ?>
+            <li><a href="inscription.php" class="dernierlien">Connexion</a></li> <?php } ?>
+
           </ul>
         </nav>
       </div>
       <div class="clear"></div>
+
     </header>

@@ -78,6 +78,7 @@
   </div>
 </section>
 
+<?php  print_r($_SESSION) ?>
 
 <?php
     include('inc/footer.php');
