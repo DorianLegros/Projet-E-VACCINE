@@ -1,4 +1,4 @@
-<?php //if(isAdminD('user', 'id', 'pseudo', 'email', 'role', 'ip')) { ?>
+<?php if(isAdminD('user', 'id', 'pseudo', 'email', 'status', 'ip')) { ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +58,7 @@
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="../index.php"><i class="fa fa-gear fa-fw"></i> Site client</a>
+                        <li><a href="../index.php"><i class="fa fa-gear fa-fw"></i>Site client</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="../deconnexion.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
@@ -102,8 +102,8 @@
             <!-- /.navbar-static-side -->
         </nav>
 
-      <?php //}
-            //else {
-            //    header('Location: ../403.php');
-            //}
+      <?php }
+            else {
+                header('Location: ../403.php');
+            }
       ?>

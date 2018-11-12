@@ -33,7 +33,7 @@ $tableUsers = $query -> fetchAll();
                 <td><?= $tableUser['status'] ?></td>
                 <td><?= $tableUser['created_at'] ?></td>
                 <td><a href="#">Modifier</a></td>
-                <td><a href="#">Supprimer</a></td>
+                <td><a href="suppruser.php?id=<?= $tableVaccin['id']; ?>">Supprimer</a></td>
               </tr>
             <?php } ?>
             </table>
