@@ -26,7 +26,7 @@ $tableVaccins = $query -> fetchAll();
             <!-- /.col-lg-12 -->
             <table class="table">
               <tr>
-                <th>User</th>
+                <th>Pseudo</th>
                 <th>Email</th>
                 <th>Role</th>
                 <th>Membre depuis</th>

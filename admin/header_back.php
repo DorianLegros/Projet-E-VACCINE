@@ -59,7 +59,7 @@
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="../index.php"><i class="fa fa-gear fa-fw"></i>Site client</a>
+                        <li><a href="../index.php"><i class="fa fa-desktop fa-fw"></i>Site client</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="../deconnexion.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
@@ -90,10 +90,10 @@
                         </li>
 
                         <li>
-                            <a href="utilisateurs.php"><i class="fa fa-table fa-fw"></i>Utilisateurs</a>
+                            <a href="utilisateurs.php"><i class="fa fa-users fa-fw"></i>Utilisateurs</a>
                         </li>
                         <li>
-                            <a href="vaccins.php"><i class="fa fa-edit fa-fw"></i>Vaccins</a>
+                            <a href="vaccins.php"><i class="fa fa-folder-open fa-fw"></i>Vaccins</a>
                         </li>
 
                     </ul>
