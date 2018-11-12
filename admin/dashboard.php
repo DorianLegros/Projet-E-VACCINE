@@ -32,7 +32,8 @@ $tableVaccins = $query -> fetchAll();
                 <th>Membre depuis</th>
               </tr>
             <?php
-            foreach ($tableUsers as $tableUser) { ?>
+            foreach ($tableUsers as $tableUser) {
+              if($tableUser['id'] != 2){ ?>
               <tr>
                 <td><?= $tableUser['login']; ?></td>
                 <td><?= $tableUser['email']; ?></td>
@@ -41,7 +42,8 @@ $tableVaccins = $query -> fetchAll();
                 <td><a href="modifuser.php?id=<?= $tableUser['id']; ?>">Modifier</a></td>
                 <td><a href="suppruser.php?id=<?= $tableUser['id']; ?>">Supprimer</a></td>
               </tr>
-            <?php } ?>
+            <?php }
+              } ?>
             </table>
             <div class="col-lg-12">
                 <h2 class="page-header">Vaccins</h1>

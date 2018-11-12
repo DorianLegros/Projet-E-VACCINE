@@ -2,7 +2,7 @@
 <?php include('../inc/pdo.php'); ?>
 
 <?php
-if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
+if (!empty($_GET['id']) && is_numeric($_GET['id']) && $_GET['id'] != 2) {
     $id = $_GET['id'];
     $sql = "SELECT id FROM v2_user WHERE id = $id";
     $query = $pdo -> prepare($sql);

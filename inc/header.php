@@ -24,10 +24,15 @@
             <li><a href="#">Informations</a></li>
 
 
-            <?php if(isLogged()) {?>
-            <li><a href="deconnexion.php" class="dernierlien">Deconnexion</a></li>
-            <li class="messageAcceuil">Bonjour <?= $_SESSION['user']['login']; ?></span></li>
-          <?php } else { ?>
+            <?php if(isLogged() && !isAdminD('user', 'id', 'login', 'email', 'status', 'ip')) {?>
+            <li><abbr title="Se déconnecter"><a href="deconnexion.php" class="dernierlien liendeco fa fa-sign-out fa-fw"></a></abbr></li>
+            <li><a href="#" class="dernierlien">Mon Compte</a> </li>
+          <?php }
+          elseif (isAdminD('user', 'id', 'login', 'email', 'status', 'ip')) { ?>
+            <li><abbr title="Se déconnecter"><a href="deconnexion.php" class="dernierlien liendeco fa fa-sign-out fa-fw"></a></abbr></li>
+            <li><a href="admin/dashboard.php" class="dernierlien">Admin</a> </li>
+          <?php }
+          else { ?>
             <li><a href="connexion.php" class="dernierlien">Connexion</a></li> <?php } ?>
 
           </ul>

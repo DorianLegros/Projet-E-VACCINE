@@ -18,7 +18,7 @@ body {
   margin : 0 auto;
 }
 
-.erreur {
+.error {
   color: red;
 }
 
@@ -77,6 +77,11 @@ body {
   float: right;
   background-color: #1D4B8C;
   border-radius: 8px;
+}
+
+#header .menu ul li .liendeco {
+  width: 5%;
+  height: 45px;
 }
 
 #header .menu ul li a:hover {
@@ -202,8 +207,6 @@ table.table .barre3 {
 }
 
 
-
-
 form {border:3px solid #ccc;  margin-top:50px;margin-bottom: 50px;border-radius: 3%;}
 h2 {text-align: center; padding-top: 10px; font-weight: bold; font-size: 1.3em;}
 input[type=text], input[type=password] {
@@ -226,52 +229,7 @@ span.psw {
     padding-top: 16px;
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-}
-/* formulaire d'inscription */
-/* Full-width input fields */
-input[type=text], input[type=password],  {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-    text-decoration-color: #D7DBDD;
-}
 
-input[type=text]:focus, input[type=password]:focus {
-    background-color: ;
-    outline: none;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-
-}
-
-/* Add padding to container elements */
-.container {
-    padding: 16px;
-}
-
-/* Clear floats */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-/* style pour la page vaccins */
 /* footer */
 #footer {
   height: 160px;
@@ -356,4 +314,50 @@ input[type=text]:focus, input[type=password]:focus {
 .copyright{
   text-align:center;
   color: #4475B5;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+/* formulaire d'inscription */
+/* Full-width input fields */
+input[type=text], input[type=password],  {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    text-decoration-color: #D7DBDD;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: ;
+    outline: none;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }

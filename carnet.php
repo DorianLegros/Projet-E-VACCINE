@@ -31,6 +31,5 @@
     </div>
   </form>
 </div>
-<a href="admin/dashboard.php">Admin</a>
 
 <?php include('inc/footer.php'); ?>

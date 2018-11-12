@@ -22,7 +22,7 @@ function generateRandomString($length = 10) {
 //fonction pour etre connecté
 function isLogged()
 {
-    if(!empty($_SESSION['user']) && !empty($_SESSION['user']['id']) && !empty($_SESSION['user']['login']) && !empty($_SESSION['user']['email']) && !empty($_SESSION['user']['status'])  &&
+    if(!empty($_SESSION['user']) && !empty($_SESSION['user']['id']) && !empty($_SESSION['user']['login']) && !empty($_SESSION['user']['email']) && !empty($_SESSION['user']['role'])  &&
     !empty($_SESSION['user']['ip']))  {
       if($_SESSION['user']['ip'] == $_SERVER['REMOTE_ADDR']) {
         return true;
