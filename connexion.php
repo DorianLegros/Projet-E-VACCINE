@@ -10,7 +10,7 @@
 
     //faille xss
     $login    = trim(strip_tags($_POST['login']));
-    $mdp = trim(strip_tags($_POST['mdp']));
+    $mdp      = trim(strip_tags($_POST['mdp']));
 
     //verification login/password existant
 
