@@ -1,4 +1,5 @@
-<?php if(isAdminD('user', 'id', 'pseudo', 'email', 'role', 'ip')) { ?>
+
+<?php if(isAdminD('user', 'id', 'login', 'email', 'status', 'ip')) { ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +21,7 @@
     <link href="../asset/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../asset/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="../asset/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">

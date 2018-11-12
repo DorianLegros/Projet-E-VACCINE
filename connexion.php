@@ -16,7 +16,7 @@
 
     $sql = "SELECT * FROM v2_user WHERE  login = :login OR email = :login";
           $query = $pdo -> prepare($sql);
-          $query -> bindValue(':login', $login);
+          $query -> bindValue(':login', $login, PDO :: PARAM_STR);
           $query -> execute();
     $user = $query -> fetch();
 
@@ -34,15 +34,15 @@
         'id' => $user['id'],
         'login' => $user['login'],
         'email' => $user['email'],
-        'role' => $user['role'],
+        'status' => $user['status'],
         'ip' => $_SERVER['REMOTE_ADDR']
       );
-      print_r($_SESSION);
-      //header('Location:carnet.php');
+      // print_r($_SESSION);
+      header('Location:carnet.php');
     }
 
   }
-  debug($error);
+  // debug($error);
   ?>
 
   <?php include('inc/header.php'); ?>
@@ -64,7 +64,7 @@
       <div class="container">
        <input type="submit" name="submitted" class="signup" value="Se connecter"></input>
 
-       <span class="psw">Mot de passe <a href="forgotten_pass">oublié?</a></span>
+       <span class="psw"><a href="forgotten_pass.php">Mot de passe oublié?</a></span>
      </div>
     </div>
   </form>

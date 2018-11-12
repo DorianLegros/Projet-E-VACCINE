@@ -1,4 +1,4 @@
-<?php include('pdo.php'); ?>
+<?php include('inc/pdo.php'); ?>
 <?php include('inc/fonction.php'); ?>
 
 
@@ -15,9 +15,9 @@ if(!empty($_POST['submitted'])) {
    //validation Email
    if (!empty($email)) {
       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $error['email'] = 'Veuillez saisir un email valide';
+      $error['email'] = 'Veuillez saisir un email valide.';
       } else{
-        $sql="SELECT email, token FROM m2_user WHERE email= :email";
+        $sql="SELECT email, token FROM v2_user WHERE email= :email";
             $query = $pdo -> prepare($sql);
             $query -> bindValue('email', $email, PDO::PARAM_STR);
             $query -> execute();

@@ -32,5 +32,6 @@
 </form>
      <a href="index.php"><input type="submit" name="submit" class="signup" value="Déconnexion"></input></a>
 </div>
+<a href="admin/dashboard.php">Admin</a>
 
 <?php include('inc/footer.php'); ?>
