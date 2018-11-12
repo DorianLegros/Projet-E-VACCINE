@@ -26,7 +26,7 @@
 
             <?php if(isLogged() && !isAdminD('user', 'id', 'login', 'email', 'status', 'ip')) {?>
             <li><abbr title="Se déconnecter"><a href="deconnexion.php" class="dernierlien liendeco fa fa-sign-out fa-fw"></a></abbr></li>
-            <li><a href="#" class="dernierlien">Mon Compte</a> </li>
+            <li><a href="carnet.php" class="dernierlien">Mon Compte</a> </li>
           <?php }
           elseif (isAdminD('user', 'id', 'login', 'email', 'status', 'ip')) { ?>
             <li><abbr title="Se déconnecter"><a href="deconnexion.php" class="dernierlien liendeco fa fa-sign-out fa-fw"></a></abbr></li>
