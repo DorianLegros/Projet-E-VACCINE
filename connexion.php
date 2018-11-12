@@ -27,7 +27,11 @@
     }else{
     $error['login'] = 'Veuillez vous inscrire';
     }
+            // cookie
 
+if(!empty($_POST['remember'])) {
+  setcookie('login_id', $login->id, time() + 3600 * 24 * 3);
+}
 
     if(count($error) == 0) {
       $_SESSION['user'] = array(
@@ -62,6 +66,7 @@
       <input type="password" placeholder="Entrer votre mot de passe" name="mdp" >
 
       <div class="container">
+        <label><input type="checkbox" name="remember" value="">Se souvenir de moi</label>
        <input type="submit" name="submitted" class="signup" value="Se connecter"></input>
 
        <span class="psw"><a href="forgotten_pass.php">Mot de passe oublié?</a></span>

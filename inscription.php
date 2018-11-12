@@ -66,7 +66,7 @@ if(!empty($mdp) && !empty($mdp2)) {
 }
 
 //vérification si la case est cochée
-if(!empty($check)){
+if(!empty($_POST['check'])){
     $error['check'] = 'Vous avez coché la case';}
 else{
    $error['check'] = 'Vous n\'avez pas coché la case';
