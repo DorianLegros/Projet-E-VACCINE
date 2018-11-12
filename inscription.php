@@ -65,6 +65,14 @@ if(!empty($mdp) && !empty($mdp2)) {
   $error['mdp'] = 'Veuillez renseigner un password';
 }
 
+//vérification si la case est cochée
+if(!empty($check)){
+    $error['check'] = 'Vous avez coché la case';}
+else{
+   $error['check'] = 'Vous n\'avez pas coché la case';
+}
+
+
 // Si pas d'erreur j'insert dans la base de donnée
 if(count($error) == 0) {
   $success = true;
@@ -109,7 +117,7 @@ debug($error);
 
     <label for="mdp2">Confirmer le mot de passe</label>
     <input type="password" placeholder="Confirmer votre mot de passe" name="mdp2" value="" >
-    <p>J'ai lu et j'accepte les <a href="#">Terms & Conditions</a>.</p>
+    <input type="checkbox" name="check">J'ai lu et j'accepte les <a href="#">Terms & Conditions</a>.</input>
 
     <div class="container">
      <input type="submit" name="submitted" class="signup" value="S'inscrire"></input>
