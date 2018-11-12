@@ -14,31 +14,29 @@
       <?php include('inc/header.php'); ?>
 
       <section id ="contenu">
-      <div class="wrap">
-        <table class="table"  style="text-align:center">
-            <tr class="">
-                <th>Nom de vaccin</th>
-                <th>Description</th>
-                <th>importance</th>
-            </tr>
-            <?php if (!empty($vaccins)){
-                foreach($vaccins as $vaccin )  { ?>
-            <tr>
-                <td><?php echo $vaccin['nomvaccin']; ?></td>
-                <td><?php echo $vaccin['description']; ?></td>
-                <td><?php if ($vaccin['importance']=='facutatif'){ ?>
-                  <div class="barre1"></div>
-                <?php } elseif($vaccin['importance'] =='recommandé'){ ?>
-                  <div class="barre2"></div><?php }
-                                elseif($vaccin['importance']== 'obligatoire'){ ?>
-                                  <div class="barre3"></div>
-                        <?php }; ?></td>
-            </tr>
-          <?php }
-        }?>
-        </table>
 
-      </div>
-    </section>
+        <div class="wrap">
+          <?php if (!empty($vaccins)) {
+            foreach($vaccins as $vaccin )  { ?>
+              <div class="case-vaccin">
+                <h3 class="nom-vaccin"><?= $vaccin['nomvaccin']; ?></h3>
+                <p class="desc-vaccin"><?= $vaccin['description']; ?></p>
+                <?php if ($vaccin['importance'] == 'facultatif'){ ?>
+                  <abbr title="Facultatif"><div class="importance-vaccin vac-fac"></div></abbr>
+                <?php } ?>
+                <?php if ($vaccin['importance'] == 'recommandé'){ ?>
+                  <abbr title="Recommandé"><div class="importance-vaccin vac-rec"></div></abbr>
+                <?php } ?>
+                <?php if ($vaccin['importance'] == 'obligatoire'){ ?>
+                  <abbr title="Obligatoire"><div class="importance-vaccin vac-obl"></div></abbr>
+                <?php } ?>
+                <div class="clear">
+              </div>
+            </div>
+
+          <?php }
+          } ?>
+        </div>
+      </section>
 
   <?php include('inc/footer.php'); ?>
