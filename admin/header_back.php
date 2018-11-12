@@ -103,8 +103,8 @@
             <!-- /.navbar-static-side -->
         </nav>
 
-      <?php }
-            else {
-                header('Location: ../403.php');
-            }
+      <?php //}
+            //else {
+            //    header('Location: ../403.php');
+            //}
       ?>

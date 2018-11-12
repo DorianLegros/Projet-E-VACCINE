@@ -35,11 +35,11 @@ $tableVaccins = $query -> fetchAll();
             foreach ($tableUsers as $tableUser) { ?>
               <tr>
                 <td><?= $tableUser['login']; ?></td>
-                <td><?= $tableUser['mail']; ?></td>
+                <td><?= $tableUser['email']; ?></td>
                 <td><?= $tableUser['status'] ?></td>
                 <td><?= $tableUser['created_at'] ?></td>
                 <td><a href="#">Modifier</a></td>
-                <td><a href="#">Supprimer</a></td>
+                <td><a href="suppruser.php?id=<?= $tableUser['id']; ?>">Supprimer</a></td>
               </tr>
             <?php } ?>
             </table>
@@ -62,7 +62,7 @@ $tableVaccins = $query -> fetchAll();
                 <td><?= $tableVaccin['importance'] ?></td>
                 <td><?= $tableVaccin['created_at'] ?></td>
                 <td><a href="#">Modifier</a></td>
-                <td><a href="#">Supprimer</a></td>
+                <td><a href="supprvaccin.php?id=<?= $tableVaccin['id']; ?>">Supprimer</a></td>
               </tr>
             <?php } ?>
             </table>
