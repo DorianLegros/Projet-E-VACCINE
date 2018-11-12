@@ -1,5 +1,5 @@
 <?php
-  include('pdo.php');
+  include('inc/pdo.php');
   include('inc/fonction.php');
 ?>
 
