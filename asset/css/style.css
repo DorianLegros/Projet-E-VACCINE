@@ -154,6 +154,43 @@ body {
     font-size: 0.9em;
 }
 
+#contenu .case-vaccin {
+  padding: 20px;
+  background-color: #EFFBFB;
+  border-radius: 20px;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+#contenu .case-vaccin .nom-vaccin, #contenu .case-vaccin .desc-vaccin, #contenu .case-vaccin .importance-vaccin {
+  float: left;
+}
+
+#contenu .case-vaccin .nom-vaccin {
+  width: 20%;
+}
+
+#contenu .case-vaccin .desc-vaccin {
+  width: 60%;
+}
+
+#contenu .case-vaccin .importance-vaccin {
+  width: 20%;
+  height: 56px;
+}
+
+#contenu .case-vaccin .vac-fac {
+  border-right: 4px yellow solid;
+}
+
+#contenu .case-vaccin .vac-rec {
+  border-right: 4px orange solid;
+}
+
+#contenu .case-vaccin .vac-obl {
+  border-right: 4px red solid;
+}
+
 #contenu .voyage .text-voyage p {
   margin: 10px 0;
 }
