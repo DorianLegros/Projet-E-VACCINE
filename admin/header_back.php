@@ -59,13 +59,10 @@
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-<<<<<<< HEAD
 
                         <li><a href="../index.php"><i class="fa fa-desktop fa-fw"></i> Site client</a>
 
-=======
-                        <li><a href="../index.php"><i class="fa fa-desktop fa-fw"></i>Site client</a>
->>>>>>> 5e0a1f52f2d8357f92193e6530889167ed935209
+
                         </li>
                         <li class="divider"></li>
                         <li><a href="../deconnexion.php"><i class="fa fa-sign-out fa-fw"></i>Se déconnecter</a>
@@ -113,7 +110,5 @@
             else {
                 header('Location: ../403.php');
             }
-<<<<<<< HEAD
-=======
+
       ?>
->>>>>>> 5e0a1f52f2d8357f92193e6530889167ed935209
