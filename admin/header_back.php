@@ -61,7 +61,8 @@
                     <ul class="dropdown-menu dropdown-user">
 
 
-                        <li><a href="../index.php"><i class="fa fa-desktop fa-fw"></i> Site client</a></li>
+
+                        <li><a href="../index.php"><i class="fa fa-desktop fa-fw"></i> Site client</a></li> </li>
                         <li class="divider"></li>
                         <li><a href="../deconnexion.php"><i class="fa fa-sign-out fa-fw"></i>Se déconnecter</a>
                         </li>

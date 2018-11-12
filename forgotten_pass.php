@@ -23,8 +23,6 @@ if(!empty($_POST['submitted'])) {
             $query -> execute();
             $user = $query -> fetch();
 
-            print_r($user);
-
         if(!empty($user)) {
           //envoi d'un mail avec reinitialisation du mdp
           echo '<p>Veuillez cliquer sur le lien ci-dessous</p>';
