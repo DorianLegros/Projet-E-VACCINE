@@ -13,6 +13,9 @@ if(isLogged()){
   $query -> execute();
   $carnets = $query -> fetchAll();
 
+  if (!empty($_POST['submitted'])) {
+    header('Location: carnet_addvaccin.php');
+  }
 
 }else{
   header('Location: 404.php');

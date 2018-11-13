@@ -11,7 +11,6 @@
  ?>
 
 <?php
-  include('inc/header.php');
 
   if(isLogged()) {
       $iduser = $_SESSION['user']['id'];
@@ -48,8 +47,11 @@
           $query = $pdo -> prepare($sql);
           $query -> bindValue(':Numlot', $numeroLot, PDO::PARAM_STR);
           $query -> execute();
+          header('Location: carnet.php');
         }
       }
+
+      include('inc/header.php');
 ?>
 
 <section id="contenu">
