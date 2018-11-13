@@ -104,14 +104,10 @@ body {
   margin: 20px 0 10px 0;
 }
 
-#contenu .actus {
-  margin-left: -2%;
-}
 
 #contenu .actus .articles {
   width: 100%;
   padding: 20px;
-  margin-left: 2%;
   float: left;
   background-color: #EFFBFB;
   border-radius: 20px;
@@ -124,10 +120,6 @@ body {
 
 #contenu .actus .articles .text-article {
   margin-top: 10px;
-}
-
-#contenu .actus h3 {
-  margin-left: 2%;
 }
 
 #contenu .actus .date {
