@@ -11,26 +11,30 @@
   <div class="wrap">
     <div class="actus">
       <h3>Actualités</h3>
-      <div class="article1 articles">
-        <img src="asset/img/carte_article1.png" alt="Carte des épidémies" width="300px" height="300px">
-        <p class="text-article">
-          <span class="date">10 novembre 2018</span><br> Comme chaque année à l'automne, la grippe fait son grand retour. Alors que la ministre de la Santé Agnès Buzyn a encouragé le recours au vaccin -
-          elle s'est elle-même faite vacciner -, faisons le point sur l'évolution de l'épidémie sur le territoire français. Grâce au réseau Sentinelles, il est possible de savoir dans quelle région
-          la grippe sévit le plus, et rassurez-vous, pour l'instant, les cas sont rares. L'activité   grippale en France a été placée au niveau "faible" par Sentinelles, qui dénombre entre 0 et 25 cas sur
-          100 000 habitants pour la plupart des régions. Le taux monte malgré tout quelque peu localement en Normandie, dans l'est, et plus sensiblement au nord de Lyon où entre 80 et 120 cas sur 100 000
-          habitants ont été décelés. Nous tenons a vous rappeler qu'il est fortement conseille de se vacciner pour les personnes de 65ans et plus.
-        </p>
-      </div>
-      <div class="article2 articles">
-        <img src="asset/img/photo_article2.jpg" alt="Photo d'un vaccin" width="300px" height="300px">
-        <p class="text-article">
-          <span class="date">29 septembre 2018</span><br> Une épidémie de rougeole touche actuellement la France. La rougeole est une maladie virale particulièrement contagieuse :
-          avant l'apparition de signes spécifiques (la période d'incubation du virus de la rougeole étant de 10 à 12 jours), un malade peut contaminer jusqu'à 15 à 20 personnes. La vaccination est la
-          seule protection contre la rougeole. Parmi les cas de rougeole observés, près de 9 sur 10 sont survenus chez des personnes non ou incomplètement vaccinées (une seule des 2 injections nécessaires
-          a ete effectuee). Chez les personnes qui n'ont jamais été vaccinées contre la rougeole, le rattrapage consiste en l'injection de deux doses de vaccin à au moins un mois d'intervalle,
-          tandis qu'une seule dose est possible chez les sujets vaccinés, mais dont la sérologie est basse.
-        </p>
-      </div>
+      <div class="flexslider">
+        <ul class="slides">
+          <li><div class="article1 articles">
+              <img src="asset/img/carte_article1.png" alt="Carte des épidémies" width="300px" height="300px">
+              <p class="text-article">
+                <span class="date">10 novembre 2018</span><br> Comme chaque année à l'automne, la grippe fait son grand retour. Alors que la ministre de la Santé Agnès Buzyn a encouragé le recours au vaccin -
+                elle s'est elle-même faite vacciner -, faisons le point sur l'évolution de l'épidémie sur le territoire français. Grâce au réseau Sentinelles, il est possible de savoir dans quelle région
+                la grippe sévit le plus, et rassurez-vous, pour l'instant, les cas sont rares. L'activité   grippale en France a été placée au niveau "faible" par Sentinelles, qui dénombre entre 0 et 25 cas sur
+                100 000 habitants pour la plupart des régions. Le taux monte malgré tout quelque peu localement en Normandie, dans l'est, et plus sensiblement au nord de Lyon où entre 80 et 120 cas sur 100 000
+                habitants ont été décelés. Nous tenons a vous rappeler qu'il est fortement conseille de se vacciner pour les personnes de 65ans et plus.
+              </p>
+            </div>
+          </li>
+          <li><div class="article2 articles">
+            <img src="asset/img/photo_article2.jpg" alt="Photo d'un vaccin" width="300px" height="300px">
+            <p class="text-article">
+              <span class="date">29 septembre 2018</span><br> Une épidémie de rougeole touche actuellement la France. La rougeole est une maladie virale particulièrement contagieuse :
+              avant l'apparition de signes spécifiques (la période d'incubation du virus de la rougeole étant de 10 à 12 jours), un malade peut contaminer jusqu'à 15 à 20 personnes. La vaccination est la
+              seule protection contre la rougeole. Parmi les cas de rougeole observés, près de 9 sur 10 sont survenus chez des personnes non ou incomplètement vaccinées (une seule des 2 injections nécessaires
+              a ete effectuee). Chez les personnes qui n'ont jamais été vaccinées contre la rougeole, le rattrapage consiste en l'injection de deux doses de vaccin à au moins un mois d'intervalle,
+              tandis qu'une seule dose est possible chez les sujets vaccinés, mais dont la sérologie est basse.
+            </p>
+          </div>
+        </li>
     </div>
   </div>
   <div class="clear"></div>

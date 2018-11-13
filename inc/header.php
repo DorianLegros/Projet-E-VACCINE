@@ -2,9 +2,13 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>E-VACCINE</title>
     <link rel="stylesheet" href="asset/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="asset/flexslider/flexslider.css" type="text/css">
+    <link rel="stylesheet" href="asset/slicknav/slicknav.css" />
   </head>
   <body>
     <header id="header">
@@ -17,8 +21,8 @@
           <h2>c'est notre priorité</h2>
         </div>
         <div class="clear"></div>
-        <nav class="menu">
-          <ul>
+        <nav class="menunav">
+          <ul id="menu">
             <li><a href="index.php">Accueil</a></li>
             <li><a href="vaccins.php">Vaccins</a></li>
             <li><a href="#">Informations</a></li>
