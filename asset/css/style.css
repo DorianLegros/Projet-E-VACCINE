@@ -3,7 +3,7 @@
 body {
   font: 400 16px/1.3 Arial, sans-serif;
   color: #1D4B8C;
-  background-color: #4BDCB6;
+  background-color: rgb(241, 242, 243);
 }
 
 .wrap {
@@ -22,9 +22,12 @@ body {
   color: red;
 }
 
+.success {
+  color:
+}
+
  #header {
-  background-color: #1D2F4C;
-  border-bottom: 3px #00B583 solid;
+  background-color: #EFFBFB;
   padding: 20px 20px 5px 20px;
 }
 
@@ -38,7 +41,6 @@ body {
   float: right;
   margin-top: -90px;
   padding-right: 200px;
-  color: #63C0C7;
 }
 
 #header h1 {
@@ -73,11 +75,11 @@ body {
   text-transform: uppercase;
   color: white;
   transition: all 0.3s;
-  background-color: #1D4B8C;
 }
 
 #header .menunav ul li .dernierlien {
   float: right;
+  background-color: #1D4B8C;
 }
 
 #header .menunav ul li .liendeco {
@@ -86,9 +88,14 @@ body {
 }
 
 #header .menunav ul li a:hover {
-  background-color: #4573b4;
+  background-color: #4E9BA0;
   color: white;
 }
+
+#header .menunav ul li .dernierlien:hover {
+  background-color: #4573b4;
+}
+
 
 #contenu {
   padding: 10px 0;
@@ -265,15 +272,13 @@ span.psw {
 /* footer */
 #footer {
   height: 270px;
-  background-color: #1D2F4C;
-  border-top: 3px #00B583 solid;
+  background-color: #EFFBFB;
   position: bottom: 0; left: 0; right: 0;
-  color: white;
   margin-top: 20px;
 }
 
 #footer a {
-  color: white;
+  color: #1D4B8C;
 }
 
 #footer h3 {
@@ -316,11 +321,6 @@ span.psw {
   cursor: pointer;
 }
 
-#footer .copyright{
-  text-align: center;
-}
-
-
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
     span.psw {
@@ -341,7 +341,7 @@ span.psw {
     }
 }
 /* formulaire */
-
+/* Full-width input fields */
 input[type=text], input[type=password],  {
     width: 100%;
     padding: 15px;
