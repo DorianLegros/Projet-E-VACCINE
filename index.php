@@ -9,6 +9,20 @@
 
 <section id="contenu">
   <div class="wrap">
+    <div class="importance">
+      <h3>Présentation</h3>
+      <div class="text-importance">
+        <p>
+          E-VACCINE est un système d’information global accessible aux personnes
+          ayant, ou souhaitant avoir un carnet de vaccination électronique en ligne.
+          L’objectif principal de notre site est de numeriser vos donnees medicales tout en les securisant.
+          En effet, votre carnet de vaccination est disponible sur le site E-VACCINE, il vous permet de consulter les vaccins disponibles, de noter ceux que vous avez effectue ainsi que leur rappel, mais aussi avoir un suivi sur votre historique de vaccination. 
+        </p>
+      </div>
+    </div>
+
+
+  <div class="wrap">
     <div class="actus">
       <h3>Actualités</h3>
       <div class="flexslider">
