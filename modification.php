@@ -1,11 +1,10 @@
 <?php include('inc/pdo.php'); ?>
 <?php include('inc/fonction.php'); ?>
-
+<?php include('inc/request.php'); ?>
 <?php $error=array();
 
 
 if(isLogged()) {
-    $id = $_SESSION['user']['id'];
  // soumission formulaire
   if(!empty($_POST['submitted'])) {
 
@@ -13,15 +12,8 @@ if(isLogged()) {
       $mdp = trim(strip_tags($_POST['mdp']));
       $newmdp = trim(strip_tags($_POST['newmdp']));
       $newmdp2 = trim(strip_tags($_POST['newmdp2']));
-
-
-        // verif password existant
-
-        $sql = "SELECT * FROM v2_user WHERE id =:id ";
-              $query = $pdo -> prepare($sql);
-              $query -> bindValue(':id', $id, PDO::PARAM_STR);
-              $query -> execute();
-              $user = $query -> fetch();
+      //faire appel à la fonction getUser
+      $user = getUser();
 
         if(!empty($user)) {
           if(!password_verify($mdp,$user['mdp'])) {
@@ -66,7 +58,7 @@ header('Location: 403.php');
 <?php include('inc/header.php'); ?>
 
 
-<form class="" action="" method="post">
+<form class="wrap" action="" method="post">
   <label for="">Votre ancien mot de passe</label>
   <span class="error"><?php if(!empty($error['mdp'])) {echo $error['mdp']; } ?></span>
   <input type="text" name="mdp" value="">

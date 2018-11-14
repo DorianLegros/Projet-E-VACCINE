@@ -1,17 +1,11 @@
 <?php include('inc/pdo.php'); ?>
 <?php include('inc/fonction.php'); ?>
+<?php include('inc/request.php'); ?>
 <?php
 if(isLogged()){
   $id = $_SESSION['user']['id'];
-
-  //requette pour récupérer les données du carnet
-  $sql = "SELECT * FROM v2_vaccins
-          LEFT JOIN v2_carnets ON v2_carnets.id_vaccins = v2_vaccins.id
-          WHERE v2_carnets.id_user = :id ORDER BY datevaccin ASC";
-  $query = $pdo -> prepare($sql);
-  $query->bindValue(':id',$id,PDO::PARAM_INT);
-  $query -> execute();
-  $carnets = $query -> fetchAll();
+// fonction pour récupérer les informations du carnet
+  $carnets = getCarnet();
 
   if (!empty($_POST['submitted'])) {
     header('Location: carnet_addvaccin.php');

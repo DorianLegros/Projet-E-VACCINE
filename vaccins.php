@@ -1,15 +1,11 @@
 <?php
   include('inc/pdo.php');
   include('inc/fonction.php');
+  include('inc/request.php');
 ?>
 <?php
-    //requete sql
-    $sql = "SELECT * FROM v2_vaccins";
-    $query = $pdo->prepare($sql);
-    $query->execute();
-    $vaccins= $query->fetchAll();
-
-
+    // faire appel à la fonction getAllvaccins()
+    $vaccins= getAllvaccins()
  ?>
       <?php include('inc/header.php'); ?>
 

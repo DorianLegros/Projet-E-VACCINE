@@ -2,7 +2,7 @@
   <div class="wrap">
 
     <div class="sectionx div1">
-      <h3>Service client</h3>
+      <h3>Liens utiles</h3>
       <ul>
         <li><a href="">Nous contacter</a></li>
         <li><a href="">Besoin d'aide</a></li>

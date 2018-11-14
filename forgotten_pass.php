@@ -1,5 +1,6 @@
 <?php include('inc/pdo.php'); ?>
 <?php include('inc/fonction.php'); ?>
+<?php include('inc/request.php'); ?>
 
 
 
@@ -11,18 +12,12 @@ if(!empty($_POST['submitted'])) {
 
    //faille XSS
    $email = trim(strip_tags($_POST['email']));
-
    //validation Email
    if (!empty($email)) {
       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $error['email'] = 'Veuillez saisir un email valide.';
       } else{
-        $sql="SELECT email, token FROM v2_user WHERE email= :email";
-            $query = $pdo -> prepare($sql);
-            $query -> bindValue('email', $email, PDO::PARAM_STR);
-            $query -> execute();
-            $user = $query -> fetch();
-
+        $user = getForgotten();
         if(!empty($user)) {
           //envoi d'un mail avec reinitialisation du mdp
           echo '<p>Veuillez cliquer sur le lien ci-dessous</p>';

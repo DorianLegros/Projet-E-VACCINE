@@ -1,29 +1,24 @@
 <?php include('inc/fonction.php'); ?>
 <?php include('inc/pdo.php'); ?>
+<?php include('inc/request.php'); ?>
 
 <?php
 
 $idUser = $_SESSION['user']['id'];
 $id = $_GET['id'];
 
-$sql = "SELECT * FROM v2_carnets WHERE id = '$id'";
-$query = $pdo -> prepare($sql);
-$query -> execute();
-$verifIdUser = $query -> fetch();
+
+$verifIdUser = getVerifIdUser();
 
 if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
-    $sql = "SELECT id FROM v2_carnets WHERE id = $id";
-    $query = $pdo -> prepare($sql);
-    $query -> execute();
-    $verifId = $query -> fetch();
+
+    $verifId = getVerifId();
     if (!empty($verifId)) {
       if ($verifIdUser['id_user'] != $idUser) {
         header('Location: 403.php');
       }
       if (!empty($_POST['submitted'])) {
-        $sql = "DELETE FROM v2_carnets WHERE id = $id";
-        $query = $pdo -> prepare($sql);
-        $query -> execute();
+        DeleteVaccin();
         header('Location: carnet.php');
       }
       if (!empty($_POST['cancel'])) {

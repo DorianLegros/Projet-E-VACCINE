@@ -1,22 +1,13 @@
 <?php include('inc/pdo.php') ?>
 <?php include('inc/fonction.php') ?>
+<?php include('inc/request.php') ?>
 
 <?php
 $error=array();
 
 if (!empty($_GET['email']) && !empty($_GET['token'])) {
-    $email = urldecode($_GET['email']);
-    $token = urldecode($_GET['token']);
-
-    // requete
-
-    $sql = "SELECT * FROM v2_user WHERE token=:token AND email=:email";
-          $query = $pdo -> prepare($sql);
-          $query -> bindValue(':email', $email, pdo::PARAM_STR);
-          $query -> bindValue(':token', $token, pdo::PARAM_STR);
-          $query -> execute();
-          $user = $query->fetch();
-
+    //faire appel à la fonction getModifPass()
+          $user = getModifPass();
           if(!empty($user)) {
             //soumission Formulaire
             if(!empty($_POST['submitted'])) {
@@ -35,17 +26,10 @@ if (!empty($_GET['email']) && !empty($_GET['token'])) {
                 }
 
                 if (count($error) == 0) {
-                  $hash = password_hash($mdp,PASSWORD_DEFAULT);
-                  $token = generateRandomString(120);
-                  $sql = "UPDATE v2_user SET mdp=:mdp, token=:token WHERE id=:id";
-                        $query = $pdo -> prepare($sql);
-                        $query -> bindValue(':mdp',$hash,PDO::PARAM_STR);
-                        $query -> bindValue(':token', $token, pdo::PARAM_STR);
-                        $query -> bindValue(':id', $user ['id'], pdo::PARAM_STR);
-                        $query -> execute();
-
-                        // redirection
-                        header('Location: connexion.php');
+                  //faire appel à la fonction pour modifier le mot de passe
+                  getUpdate();
+                  // redirection
+                 header('Location: connexion.php');
                 }
             }
           } else {
@@ -60,7 +44,7 @@ if (!empty($_GET['email']) && !empty($_GET['token'])) {
 
  <?php include('inc/header.php'); ?>
 
-<form class="new_password" action="" method="post">
+<form class="wrap new_password" action="" method="post">
   <label for="">Nouveau mot de passe *</label>
   <input type="password" name="mdp" value="">
 

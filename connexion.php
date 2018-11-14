@@ -1,24 +1,17 @@
 
   <?php include('inc/pdo.php'); ?>
   <?php include('inc/fonction.php'); ?>
+  <?php include('inc/request.php'); ?>
   <?php
 
   $error=array();
 
   // soumission formulaire
   if(!empty($_POST['submitted'])) {
-
     //faille xss
-    $login    = trim(strip_tags($_POST['login']));
     $mdp      = trim(strip_tags($_POST['mdp']));
-
     //verification login/password existant
-
-    $sql = "SELECT * FROM v2_user WHERE  login = :login OR email = :login";
-          $query = $pdo -> prepare($sql);
-          $query -> bindValue(':login', $login, PDO :: PARAM_STR);
-          $query -> execute();
-    $user = $query -> fetch();
+   $user = getConnexion();
 
     if(!empty($user)) {
       if(!password_verify($mdp,$user['mdp'])) {

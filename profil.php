@@ -1,17 +1,11 @@
 <?php include('inc/pdo.php'); ?>
 <?php include('inc/fonction.php'); ?>
+<?php include('inc/request.php'); ?>
 <?php
 
-
 if (isLogged()){
- $id = $_SESSION['user']['id'];
- //requette pour récupérer les Informations de l'utilisateur
- $sql = "SELECT * FROM v2_user WHERE id = :id ";
- $query = $pdo -> prepare($sql);
- $query->bindValue(':id',$id,PDO::PARAM_STR);
- $query -> execute();
- $user = $query -> fetch();
-
+ //faire appel à la fonction getUser
+ $user =getUser();
 }else{
   header('Location: 404.php');
 }
@@ -49,9 +43,5 @@ if (isLogged()){
   </table>
  <a href="modification.php">Modifier mon mot de passe</a>
 </div>
-
-
-
-
 
 <?php include('inc/footer.php'); ?>
