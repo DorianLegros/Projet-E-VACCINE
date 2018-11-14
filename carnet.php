@@ -5,9 +5,9 @@ if(isLogged()){
   $id = $_SESSION['user']['id'];
 
   //requette pour récupérer les données du carnet
-  $sql = "SELECT * FROM v2_carnets
-          LEFT JOIN v2_vaccins ON v2_carnets.id_vaccins = v2_vaccins.id
-          WHERE v2_carnets.id_user = :id";
+  $sql = "SELECT * FROM v2_vaccins
+          LEFT JOIN v2_carnets ON v2_carnets.id_vaccins = v2_vaccins.id
+          WHERE v2_carnets.id_user = :id ORDER BY datevaccin ASC";
   $query = $pdo -> prepare($sql);
   $query->bindValue(':id',$id,PDO::PARAM_INT);
   $query -> execute();
@@ -35,6 +35,7 @@ if(isLogged()){
           <th>Date du vaccin</th>
           <th>Rappel du vaccin</th>
           <th>N°de lot</th>
+          <th>Effectué ?</th>
         </tr>
 
           <?php foreach ($carnets as $carnet){ ?>
@@ -43,7 +44,14 @@ if(isLogged()){
             <td><?=  $carnet['datevaccin'] ?></td>
             <td><?=  $carnet['rappelvaccin'] ?></td>
             <td><?=  $carnet['num_lot'] ?></td>
-            <td><a href="carnet_modifvaccin.php?id=<?php $_SESSION['user']['id'];?>">Modifier</a></td>
+            <?php if ($carnet['etat'] == 'fait'){?>
+              <td><p class="vaccinfait">X</p></td>
+            <?php }
+            else { ?>
+              <td></td>
+            <?php } ?>
+            <td><a href="carnet_modifvaccin.php?id=<?= $carnet['id']; ?>">Modifier</a></td>
+            <td><a href="carnet_supprvaccin.php?id=<?= $carnet['id']; ?>">Supprimer</a></td>
 
        </tr>
        <?php } ?>
