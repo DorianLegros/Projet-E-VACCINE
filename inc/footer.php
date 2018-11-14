@@ -14,9 +14,9 @@
       <h3>Contact</h3>
       <ul>
         <li>24 Place Saint-Marc, 76000 Rouen</li>
-        <li>02.35.00.00</li>
-        <li>e_vaccine@gmail.fr</li>
-        <li><a href="index.php">Htpps://www.e_vaccine.fr</a></li>
+        <li>02.35.00.00.00</li>
+        <li>e-vaccine@gmail.fr</li>
+        <li><a href="index.php">https://www.e-vaccine.fr</a></li>
       </ul>
     </div>
     <div class="clear"></div>
