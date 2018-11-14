@@ -37,7 +37,7 @@
 
         if (!empty($numeroLot)) {
           if (strlen($numeroLot) > 20) {
-            $errors['numlot'] = 'Ce que vous avez saisi et trop long, un n° de lot ne peut avoir plus de 20 caractères.';
+            $errors['numlot'] = 'Ce que vous avez saisi est trop long, un n° de lot ne peut avoir plus de 20 caractères.';
           }
         }
 
@@ -72,7 +72,7 @@
       <option value="3 ans">3 ans</option>
       <option value="plusieurs années">plusieurs années</option>
     </select>
-    <input type="submit" name="submitted" value="Ajouter">
+    <input class="btnConfirm"  type="submit" name="submitted" value="Ajouter">
   </form>
 </section>
 

@@ -26,9 +26,11 @@ if(isLogged()){
 <?php include('inc/header.php'); ?>
 <!--  affichage du carnet-->
 <div class="wrap">
+  <a href="profil.php">Mon profil</a>
+
   <form action="" method="post">
     <div class="container">
-      <input type="submit" name="submitted" value="Ajouter un vaccin">
+      <input class="btnConfirm" type="submit" name="submitted" value="Ajouter un vaccin">
       <table class="table">
         <tr>
           <th>Nom du vaccin</th>
@@ -62,5 +64,5 @@ if(isLogged()){
     </div>
   </form>
 </div>
- <a href="profil.php">Mon profil</a>
+
 <?php include('inc/footer.php'); ?>

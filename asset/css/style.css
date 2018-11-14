@@ -45,6 +45,7 @@ body {
 
 #header h1 {
   font-family: 'Cinzel', sans-serif;
+
   font-size: 1.7em;
   letter-spacing: 0.1em;
   font-weight: bold;
@@ -113,6 +114,7 @@ body {
   padding: 20px;
   float: left;
   background-color: #EFFBFB;
+  box-shadow: 3px 3px #ccc;
   border-radius: 20px;
   height: 600px;
 }
@@ -130,10 +132,12 @@ body {
 
 #contenu .importance .text-importance {
   line-height: 1.5em;
+  box-shadow: 3px 3px #ccc;
 }
 
 #contenu .voyage .text-voyage {
   line-height: 1.5em;
+  box-shadow: 3px 3px #ccc;
 }
 
 #contenu .actus .date {
@@ -169,6 +173,7 @@ body {
   border-radius: 20px;
   font-size: 0.9em;
   margin-bottom: 10px;
+  box-shadow: 3px 3px #ccc;
 }
 
 #contenu .case-vaccin .nom-vaccin, #contenu .case-vaccin .desc-vaccin, #contenu .case-vaccin .importance-vaccin {
@@ -244,7 +249,13 @@ table.table td {
   background-color: #ffffff;
 }
 
-
+.btnConfirm {
+  background-color: #1D4B8C;
+  border: #1D4B8C;
+  border-radius: 2px;
+  padding: 5px 15px;
+  color: white;
+}
 
 form {border:3px solid #ccc;  margin-top:50px;margin-bottom: 50px;border-radius: 10px;}
 h2 {text-align: center; padding-top: 10px; font-weight: bold; font-size: 1.3em;}

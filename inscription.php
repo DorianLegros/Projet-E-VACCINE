@@ -121,12 +121,12 @@ if(count($error) == 0) {
     <input type="checkbox" name="check">J'ai lu et j'accepte les <a href="#">Terms & Conditions</a>.</input>
 
     <div class="container">
-     <input type="submit" name="submitted" class="connexion" value="S'inscrire"></input>
+     <input class="btnConfirm" type="submit" name="submitted" class="connexion" value="S'inscrire"></input>
 
    </div>
   </div>
 </form>
-     <a href="connexion.php"><input type="submit" name="submit" class="sinscrire" value="Se connecter"></input></a>
+     <a href="connexion.php"><input class="btnConfirm" type="submit" name="submit" class="sinscrire" value="Se connecter"></input></a>
 </div>
 
 <?php include('inc/footer.php'); ?>
