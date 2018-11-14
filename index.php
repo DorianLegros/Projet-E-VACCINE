@@ -9,6 +9,25 @@
 
 <section id="contenu">
   <div class="wrap">
+    <div class="importance">
+      <h3>Présentation</h3>
+      <div class="text-importance">
+        <p>
+          Le E-VACCINE est un système d’information global accessible aux personnes,
+          capable d’avoir un carnet de vaccination électronique.
+          L’objectif principal est d’utiliser le support numérique du carnet de vaccination électronique  pour
+          améliorer la qualité et l’exhaustivité des informations concernant la survenue, mais aussi la non-survenue
+          Le Carnet de Vavvination Electronique est disponible sur le site E-VACCINE , il intègre un système expert d’aide à la décision vaccinale
+          prenant en compte les caractéristiques individuelles et l’historique vaccinal de chaque personne. Le E-VACCINE
+          aide le citoyen  à effectuer le suivi vaccinal. Il facilite le respect des bonnes
+          pratiques vaccinales. Les données du E-VACCINE sont hébergées par la société IDS (agrément du Ministère de la santé pour l’hébergement de
+          données de santé). Le E-VACCINE est autorisé par la CNIL (n°1485378).
+        </p>
+      </div>
+    </div>
+
+
+  <div class="wrap">
     <div class="actus">
       <h3>Actualités</h3>
       <div class="flexslider">

@@ -41,6 +41,7 @@ if(isLogged()){
             <td><?=  $carnet['rappelvaccin'] ?></td>
             <td><?=  $carnet['num_lot'] ?></td>
             <td><a href="carnet_modifvaccin.php?id=<?php $_SESSION['user']['id'];?>">Modifier</a></td>
+            <td><a href="carnet_modifvaccin.php?id=<?php $_SESSION['user']['id'];?>">Supprimer</a></td>
 
        </tr>
        <?php } ?>

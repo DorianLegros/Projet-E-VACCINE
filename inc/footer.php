@@ -1,32 +1,42 @@
 <footer id=footer>
-  <div class="clear"></div>
+
   <div class="wrap">
-    <form class="wrap" action="" method="post">
+
+    <div class="sectionx div1">
+      <h3>Service client</h3>
+      <ul>
+        <li><a href="">Nous contacter</a></li>
+        <li><a href="">Besoin d'aide</a></li>
+        <li><a href="">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="sectionx div2">
+      <h3>Contact</h3>
+      <ul>
+        <li>24 Place Saint-Marc, 76000 Rouen</li>
+        <li>02.35.00.00</li>
+        <li>e_vaccine@gmail.fr</li>
+        <li><a href="index.php">Htpps://www.e_vaccine.fr</a></li>
+      </ul>
+    </div>
+
+    <form class="sectionx div3" action="" method="post">
       <div class="label">
-        <label>RECEVEZ NOTRE NEWSLETTER</label>
+        <h3>RECEVEZ NOTRE NEWSLETTER</h3>
+        <p>Recevez en avant première nos dernières nouveautés & exclusivités</p>
       </div>
       <div class="champ">
         <input type="email" name="email" value="VOTRE EMAIL">
         <input type="submit" name="" value="S'INSCRIRE">
       </div>
     </form>
-    <div class="reseau">
-      <p>&nbsp Réseaux sociaux!</p><br>
-      <a href="#" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-twitter"></a>
-      <a href="#" class="fa fa-google"></a>
-      <a href="#" class="fa fa-linkedin"></a>
-    </div>
-    <div class="clear"></div>
 
-  </div>
-  <div class="cookie">
+  <!-- <div class="cookie">
     <p>Contenu du COOKIE $_COOKIE</p>
     <?= var_dump($_COOKIE); ?>
-  </div>
-  <div>
-    <p class="copyright">Copyright 2019 E-vaccine Theme.</p>
-  </div>
+  </div> -->
+
 </footer>
 
 <script
