@@ -22,13 +22,13 @@
                 <h3 class="nom-vaccin"><?= $vaccin['nomvaccin']; ?></h3>
                 <p class="desc-vaccin"><?= $vaccin['description']; ?></p>
                 <?php if ($vaccin['importance'] == 'facultatif'){ ?>
-                  <abbr title="Facultatif"><div class="importance-vaccin vac-fac"></div></abbr>
+                  <abbr title="Facultatif"><div class="importance-vaccin vac-fac"><p>Facultatif</p></div></abbr>
                 <?php } ?>
                 <?php if ($vaccin['importance'] == 'recommandé'){ ?>
-                  <abbr title="Recommandé"><div class="importance-vaccin vac-rec"></div></abbr>
+                  <abbr title="Recommandé"><div class="importance-vaccin vac-rec"><p>Recommandé</p></div></abbr>
                 <?php } ?>
                 <?php if ($vaccin['importance'] == 'obligatoire'){ ?>
-                  <abbr title="Obligatoire"><div class="importance-vaccin vac-obl"></div></abbr>
+                  <abbr title="Obligatoire"><div class="importance-vaccin vac-obl"><p>Obligatoire</p></div></abbr>
                 <?php } ?>
                 <div class="clear">
               </div>

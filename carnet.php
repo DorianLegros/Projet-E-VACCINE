@@ -30,7 +30,7 @@ if(isLogged()){
 
   <form action="" method="post">
     <div class="container">
-      <input type="submit" name="submitted" value="Ajouter un vaccin">
+      <input class="btnConfirm" type="submit" name="submitted" value="Ajouter un vaccin">
       <table class="table">
         <tr>
           <th>Nom du vaccin</th>

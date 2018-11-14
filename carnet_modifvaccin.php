@@ -125,7 +125,7 @@
               <option <?php echo $s2; ?>value="<?php echo $key; ?>"><?php echo $value; ?></option>
       <?php } ?>
     </select>
-    <input type="submit" name="submitted" value="Ajouter">
+    <input class="btnConfirm" type="submit" name="submitted" value="Ajouter">
   </form>
 </section>
 

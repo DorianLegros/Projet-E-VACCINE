@@ -64,7 +64,7 @@ body {
 #header .menunav ul li a {
   float: left;
   margin-top: 20px;
-  border: 2px white solid;
+  margin-right: 6px;
   border-radius: 3px;
   width: 18%;
   background-color: #63C0C7;
@@ -74,28 +74,22 @@ body {
   text-transform: uppercase;
   color: white;
   transition: all 0.3s;
+  background-color: #1D4B8C;
 }
 
 #header .menunav ul li .dernierlien {
   float: right;
-  background-color: #1D4B8C;
-  border-radius: 8px;
 }
 
 #header .menunav ul li .liendeco {
   width: 5%;
-  height: 45px;
+  height: 40px;
 }
 
 #header .menunav ul li a:hover {
-  background-color: #4e9ba0;
+  background-color: #4573b4;
   color: white;
 }
-
-#header .menunav ul li .dernierlien:hover {
-  background-color: #4573b4;
-}
-
 
 #contenu {
   padding: 10px 0;
@@ -125,6 +119,15 @@ body {
 #contenu .actus .articles .text-article {
   float: right;
   margin-top: 10px;
+  line-height: 1.5em;
+}
+
+#contenu .importance .text-importance {
+  line-height: 1.5em;
+}
+
+#contenu .voyage .text-voyage {
+  line-height: 1.5em;
 }
 
 #contenu .actus .date {
@@ -177,10 +180,20 @@ body {
 #contenu .case-vaccin .importance-vaccin {
   width: 20%;
   height: 56px;
+  padding-top: 20px;
+}
+
+#contenu .case-vaccin .importance-vaccin p {
+  float: right;
+  padding-right: 10px;
+}
+
+#contenu .case-vaccin:first-child {
+  margin-top: 20px;
 }
 
 #contenu .case-vaccin .vac-fac {
-  border-right: 4px yellow solid;
+  border-right: 4px #F7E136 solid;
 }
 
 #contenu .case-vaccin .vac-rec {
@@ -225,7 +238,13 @@ table.table td {
   background-color: #ffffff;
 }
 
-
+.btnConfirm {
+  background-color: #1D4B8C;
+  border: #1D4B8C;
+  border-radius: 2px;
+  padding: 5px 15px;
+  color: white;
+}
 
 form {border:3px solid #ccc;  margin-top:50px;margin-bottom: 50px;border-radius: 10px;}
 h2 {text-align: center; padding-top: 10px; font-weight: bold; font-size: 1.3em;}
@@ -253,9 +272,21 @@ span.psw {
 /* footer */
 #footer {
   height: 270px;
-  background-color: #EFFBFB;
-  position: bottom: 0; left: 0; right: 0
+  background-color: #1D2F4C;
+  border-top: 3px #00B583 solid;
+  position: bottom: 0; left: 0; right: 0;
+  color: white;
+  margin-top: 20px;
 }
+
+#footer a {
+  color: white;
+}
+
+#footer h3 {
+  text-transform: uppercase;
+}
+
 #footer .sectionx {
   float: left;
   width: 33.3333333333333333333333333333%;
@@ -292,6 +323,11 @@ span.psw {
   cursor: pointer;
 }
 
+#footer .copyright{
+  text-align: center;
+}
+
+
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
     span.psw {
@@ -312,7 +348,7 @@ span.psw {
     }
 }
 /* formulaire */
-/* Full-width input fields */
+
 input[type=text], input[type=password],  {
     width: 100%;
     padding: 15px;

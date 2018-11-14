@@ -72,7 +72,7 @@
       <option value="3 ans">3 ans</option>
       <option value="plusieurs années">plusieurs années</option>
     </select>
-    <input type="submit" name="submitted" value="Ajouter">
+    <input class="btnConfirm"  type="submit" name="submitted" value="Ajouter">
   </form>
 </section>
 
