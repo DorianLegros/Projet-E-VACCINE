@@ -19,6 +19,8 @@
         <li><a href="index.php">https://www.e-vaccine.fr</a></li>
       </ul>
     </div>
+
+
     <div class="clear"></div>
     <div>
       <p class="copyright">Copyright 2018 E-Vaccine&copy; Theme.</p>

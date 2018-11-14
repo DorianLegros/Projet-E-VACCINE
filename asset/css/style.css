@@ -316,6 +316,11 @@ span.psw {
   cursor: pointer;
 }
 
+#footer .copyright{
+  text-align: center;
+}
+
+
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
     span.psw {
@@ -336,7 +341,7 @@ span.psw {
     }
 }
 /* formulaire */
-/* Full-width input fields */
+
 input[type=text], input[type=password],  {
     width: 100%;
     padding: 15px;
