@@ -67,14 +67,14 @@
 
       <div class="container">
         <!-- <label><input type="checkbox" name="remember" value="yes">Se souvenir de moi<br></label> -->
-       <input class="btnConfirm" type="submit" name="submitted" class="connexion" value="Se connecter"></input>
+       <input class="btnConfirm" type="submit" name="submitted"  value="Se connecter"></input>
 
        <span class="psw"><a href="forgotten_pass.php">Mot de passe oublié?</a></span>
      </div>
     </div>
   </form>
 
-      <a href="inscription.php"><input class="btnConfirm" type="submit" name"submit" class="sinscrire" value="S'inscrire"></input></a>
+      <a href="inscription.php"><input class="btnInsc" type="submit" name"submit" class="sinscrire" value="S'inscrire"></input></a>
   </div>
 
   <?php include('inc/footer.php'); ?>
