@@ -29,9 +29,9 @@
     }
             // cookie
 
-if(!empty($_POST['remember'])) {
-  setcookie('auth', $user['id'] . '-----' . sha1($user['login'] . $user['mdp']), time() + 3600 * 24 * 3, '/', 'localhost', false, true);
-}
+// if(!empty($_POST['remember'])) {
+//   setcookie('auth', $user['id'] . '-----' . sha1($user['login'] . $user['mdp']), time() + 3600 * 24 * 3, '/', 'localhost', false, true);
+// }
 
     if(count($error) == 0) {
       $_SESSION['user'] = array(

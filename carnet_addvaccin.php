@@ -37,7 +37,7 @@
 
         if (!empty($numeroLot)) {
           if (strlen($numeroLot) > 20) {
-            $errors['numlot'] = 'Ce que vous avez saisi et trop long, un n° de lot ne peut avoir plus de 20 caractères.';
+            $errors['numlot'] = 'Ce que vous avez saisi est trop long, un n° de lot ne peut avoir plus de 20 caractères.';
           }
         }
 

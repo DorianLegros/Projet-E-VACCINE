@@ -2,9 +2,11 @@
   include('inc/pdo.php');
   include('inc/fonction.php');
 
-  if (!empty($_POST['submitted'])) {
 
     $errors = array();
+  if (!empty($_POST['submitted'])) {
+
+
 
     if (!filter_var($_POST['mail'],FILTER_VALIDATE_EMAIL)) {
       $errors['mail'] = 'Veuillez saisir un email valide.';
