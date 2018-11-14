@@ -1,6 +1,8 @@
 <?php include('inc/pdo.php'); ?>
 <?php include('inc/fonction.php'); ?>
 <?php
+
+
 if (isLogged()){
  $id = $_SESSION['user']['id'];
  //requette pour récupérer les Informations de l'utilisateur
@@ -33,6 +35,10 @@ if (isLogged()){
       <td><?php if($user['age'] == 0){echo 'Age non renseigner'; }else{echo $user['age']; }; ?></td>
     </tr>
     <tr>
+      <td>Mot de passe: </td>
+      <td>&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;</td>
+    </tr>
+    <tr>
       <td>Date de création:</td>
       <td><?php echo $user['created_at']; ?></td>
     </tr>
@@ -41,7 +47,7 @@ if (isLogged()){
       <td><?php echo $user['updated_at']; ?></td>
     </tr>
   </table>
-
+ <a href="modification.php">Modifier mon mot de passe</a>
 </div>
 
 

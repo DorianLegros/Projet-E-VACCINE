@@ -26,7 +26,7 @@
           <ul id="menu">
             <li><a href="index.php">Accueil</a></li>
             <li><a href="vaccins.php">Vaccins</a></li>
-            <li><a href="#">Informations</a></li>
+            <li><a href="infos.php">Informations</a></li>
 
 
             <?php if(isLogged() && !isAdminD('user', 'id', 'login', 'email', 'status', 'ip')) {?>

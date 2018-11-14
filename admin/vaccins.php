@@ -1,11 +1,9 @@
 <?php include('../inc/pdo.php') ?>
 <?php include('../inc/fonction.php') ?>
+<?php include('../inc/request.php') ?>
 
 <?php
-$sql = "SELECT * FROM v2_vaccins WHERE 1=1";
-$query = $pdo -> prepare($sql);
-$query -> execute();
-$tableVaccins = $query -> fetchAll();
+$tableVaccins = getAllvaccins();
  ?>
 
  <?php include('header_back.php') ?>
@@ -33,7 +31,7 @@ $tableVaccins = $query -> fetchAll();
                 <td><?= $tableVaccin['description']; ?></td>
                 <td><?= $tableVaccin['importance'] ?></td>
                 <td><?= $tableVaccin['created_at'] ?></td>
-                <td><a href="#">Modifier</a></td>
+                <td><a href="modifvaccin.php?id=<?= $tableVaccin['id']; ?>">Modifier</a></td>
                 <td><a href="supprvaccin.php?id=<?= $tableVaccin['id']; ?>">Supprimer</a></td>
               </tr>
             <?php } ?>

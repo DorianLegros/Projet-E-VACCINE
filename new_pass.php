@@ -49,11 +49,11 @@ if (!empty($_GET['email']) && !empty($_GET['token'])) {
                 }
             }
           } else {
-            die ('404');
+            header('Location: 404.php');
           }
 }
   else{
-    die('404');
+    header('Location: 404.php');
   }
 
  ?>
@@ -64,7 +64,7 @@ if (!empty($_GET['email']) && !empty($_GET['token'])) {
   <label for="">Nouveau mot de passe *</label>
   <input type="password" name="mdp" value="">
 
-  <label for="">Vonfirmer votre nouveau mot de passe *</label>
+  <label for="">Confirmer votre nouveau mot de passe *</label>
   <input type="password" name="mdp2" value="">
 
   <input type="submit" name="submitted" value="Confirmer">

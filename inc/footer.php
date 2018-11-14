@@ -32,10 +32,7 @@
       </div>
     </form>
 
-  <!-- <div class="cookie">
-    <p>Contenu du COOKIE $_COOKIE</p>
-    <?= var_dump($_COOKIE); ?>
-  </div> -->
+
 
 </footer>
 

@@ -32,8 +32,8 @@ $tableUsers = $query -> fetchAll();
                 <td><?= $tableUser['email']; ?></td>
                 <td><?= $tableUser['status'] ?></td>
                 <td><?= $tableUser['created_at'] ?></td>
-                <td><a href="#">Modifier</a></td>
-                <td><a href="suppruser.php?id=<?= $tableVaccin['id']; ?>">Supprimer</a></td>
+                <td><a href="modifuser.php?id=<?= $tableUser['id']; ?>">Modifier</a></td>
+                <td><a href="suppruser.php?id=<?= $tableUser['id']; ?>">Supprimer</a></td>
               </tr>
             <?php } ?>
             </table>
