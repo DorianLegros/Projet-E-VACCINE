@@ -1,5 +1,4 @@
 <footer id=footer>
-
   <div class="wrap">
 
     <div class="sectionx div1">
@@ -21,16 +20,12 @@
       </ul>
     </div>
 
-    <form class="sectionx div3" action="" method="post">
-      <div class="label">
-        <h3>RECEVEZ NOTRE NEWSLETTER</h3>
-        <p>Recevez en avant première nos dernières nouveautés & exclusivités</p>
-      </div>
-      <div class="champ">
-        <input type="email" name="email" value="VOTRE EMAIL">
-        <input type="submit" name="" value="S'INSCRIRE">
-      </div>
-    </form>
+
+    <div class="clear"></div>
+    <div>
+      <p class="copyright">Copyright 2018 E-Vaccine&copy; Theme.</p>
+    </div>
+  </div>
 </footer>
 
 <script
