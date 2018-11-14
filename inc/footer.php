@@ -31,9 +31,6 @@
         <input type="submit" name="" value="S'INSCRIRE">
       </div>
     </form>
-
-
-
 </footer>
 
 <script
