@@ -54,16 +54,16 @@
   <!-- formulaire de connexion -->
   <div class="wrap">
   <form action="" class="connexion" method="post">
-    <h2 >Connexion</h2>
+    <h2>Connexion</h2>
     <div class="container">
 
       <label for="login"><b>Login</b></label>
       <span class="error"><?php if(!empty($error['login'])) {echo $error['login']; } ?></span>
-      <input type="text" placeholder="Pseudo ou mail *" value="<?php if(!empty($_POST['login'])) { echo $_POST['login'] ;} ?>" name="login">
+      <input type="text" placeholder="Pseudo ou email" value="<?php if(!empty($_POST['login'])) { echo $_POST['login'] ;} ?>" name="login">
 
       <label for="mdp"><b>Mot de passe</b></label>
       <span class="error"><?php if(!empty($error['mdp'])) {echo $error['mdp']; } ?></span>
-      <input type="password" placeholder="Entrer votre mot de passe" name="mdp" >
+      <input type="password" placeholder="Saisissez votre mot de passe" name="mdp" >
 
       <div class="container">
         <!-- <label><input type="checkbox" name="remember" value="yes">Se souvenir de moi<br></label> -->

@@ -99,13 +99,13 @@ body {
 
 
 #contenu {
-  padding: 10px 0;
+  padding: 0 0 20px 0;
 }
 
 #contenu h3 {
   font-size: 1.4em;
   text-transform: uppercase;
-  margin: 20px 0 10px 0;
+  margin: 40px 0 10px 0;
 }
 
 
@@ -116,15 +116,15 @@ body {
   background-color: #EFFBFB;
   box-shadow: 3px 3px #ccc;
   border-radius: 20px;
-  height: 600px;
+  height: 450px;
 }
 
 #contenu .actus img {
   float: left;
-  width: 40%;
 }
 
 #contenu .actus .articles .text-article {
+  width: 58%;
   float: right;
   margin-top: 10px;
   line-height: 1.5em;
@@ -267,6 +267,16 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: radius 1px solid #ccc;
     box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  color: #4475B5;
+  display: inline-block;
+  border: radius 1px solid #ccc;
+  box-sizing: border-box;
 }
 
 
