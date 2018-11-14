@@ -25,12 +25,6 @@
 
 <section id="contenu">
   <div class="wrap">
-    <h3>Qu'est ce que E-VACCINE ?</h3>
-    <div class="articles">
-      <p class="text-article">E-Vaccine zhfhzfhzfhzfzrkhzrfrkfgzgfrfz</p>
-    </div>
-    <h3>Maybe une autre catégorie ?</h3>
-
     <h3 ="text-form">Nous contacter</h3>
     <hr>
     <form class="" action="" method="post">
