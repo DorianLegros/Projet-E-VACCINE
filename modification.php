@@ -79,7 +79,7 @@ header('Location: 403.php');
   <span class="error"><?php if(!empty($error['newmdp'])) {echo $error['newmdp']; } ?></span>
   <input type="password" name="newmdp2" value="">
 
-  <input type="submit" name="submitted" value="Confirmer">
+  <input class="btnConfirm" type="submit" name="submitted" value="Confirmer">
 </form>
 
 <?php

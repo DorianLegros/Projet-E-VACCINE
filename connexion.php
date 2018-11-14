@@ -66,8 +66,8 @@
       <input type="password" placeholder="Entrer votre mot de passe" name="mdp" >
 
       <div class="container">
-        <!-- <label><input type="checkbox" name="remember" value="yes">Se souvenir de moi<br></label>
-       <input type="submit" name="submitted" class="connexion" value="Se connecter"></input> -->
+        <!-- <label><input type="checkbox" name="remember" value="yes">Se souvenir de moi<br></label> -->
+       <input class="btnConfirm" type="submit" name="submitted" class="connexion" value="Se connecter"></input>
 
        <span class="psw"><a href="forgotten_pass.php">Mot de passe oublié?</a></span>
      </div>

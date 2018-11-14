@@ -55,7 +55,7 @@ if (isLogged()){
     <tr>
       <td>Age:
         <input type="text" class="age" name="" placeholder="Renseigner votre age" value="">
-        <input type="submit" name="submited" value="Confirmer"></td>
+        <input class="btnConfirm" type="submit" name="submited" value="Confirmer"></td>
 
       <td><?php if($user['age'] == 0){echo $user['age']; }else{echo $user['age']; }; ?></td>
     </tr>
