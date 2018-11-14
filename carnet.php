@@ -60,5 +60,5 @@ if(isLogged()){
     </div>
   </form>
 </div>
-
+ <a href="profil.php">Mon profil</a>
 <?php include('inc/footer.php'); ?>

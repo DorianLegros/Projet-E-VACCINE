@@ -20,10 +20,10 @@
     <div class="clear"></div>
 
   </div>
-  <div class="cookie">
+  <!-- <div class="cookie">
     <p>Contenu du COOKIE $_COOKIE</p>
     <?= var_dump($_COOKIE); ?>
-  </div>
+  </div> -->
   <div>
     <p class="copyright">Copyright 2019 E-vaccine Theme.</p>
   </div>
