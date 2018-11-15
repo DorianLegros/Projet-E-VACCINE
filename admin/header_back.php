@@ -47,7 +47,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../index.php">SB Admin v2.0</a>
+                <a class="navbar-brand" href="../index.php">E-Vaccine Interface Administrateur</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -63,6 +63,7 @@
 
 
                         <li><a href="../index.php"><i class="fa fa-desktop fa-fw"></i> Site client</a></li> </li>
+                        <li><a href="../profil.php"><i class="fa fa-gear fa-fw"></i> Paramètres du compte</a></li> </li>
                         <li class="divider"></li>
                         <li><a href="../deconnexion.php"><i class="fa fa-sign-out fa-fw"></i>Se déconnecter</a>
                         </li>

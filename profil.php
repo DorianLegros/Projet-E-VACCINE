@@ -15,6 +15,10 @@ if (isLogged()){
  ?>
 <?php include('inc/header.php'); ?>
 <div class="wrap">
+  <div class="liens-paramcompte">
+    <a class="lien-paracompte" href="carnet.php">Mon Carnet</a>
+    <a class="lien-paracompte" href="profil.php">Paramètres</a>
+  </div>
   <table>
     <tr>
       <td>Paramètres du compte</td>
@@ -26,13 +30,6 @@ if (isLogged()){
     <tr>
       <td>Email:</td>
       <td><?php echo $user['email']; ?></td>
-    </tr>
-    <tr>
-      <td>Age:
-        <input type="text" class="age" name="" placeholder="Renseigner votre age" value="">
-        <input class="btnConfirm" type="submit" name="submited" value="Confirmer"></td>
-
-      <td><?php if($user['age'] == 0){echo $user['age']; }else{echo $user['age']; }; ?></td>
     </tr>
     <tr>
       <td>Mot de passe: </td>

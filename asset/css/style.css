@@ -4,6 +4,7 @@ body {
   font: 400 16px/1.3 Arial, sans-serif;
   color: #1D4B8C;
   background-color: rgb(241, 242, 243);
+  overflow-x: hidden;
 }
 
 .wrap {
@@ -28,7 +29,7 @@ body {
 
  #header {
   background-color: #EFFBFB;
-  padding: 20px 20px 5px 20px;
+  padding: 20px 0 5px 0;
 }
 
 #header .logo img {
@@ -221,6 +222,10 @@ body {
   margin: 10px 0;
 }
 
+.liens-paramcompte .lien-paracompte {
+  width: 50%;
+}
+
 /* style tableau vaccins */
 table.table {
   font-family: verdana, arial, sans-serif;
@@ -368,13 +373,10 @@ span.psw {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
 #footer .copyright{
   text-align: center;
 }
 
-
-=======
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
     span.psw {
@@ -389,7 +391,6 @@ span.psw {
       margin-top: 0;
       padding-right: 0;
     }
->>>>>>> 0b468cdcde612eec5bd855d29ddb46b32ecbbeb5
 
 /* formulaire */
 /* Full-width input fields */
