@@ -1,7 +1,6 @@
 <?php include('newsletter.php') ?>
 <footer id=footer>
   <div class="wrap">
-
     <div class="sectionx div1">
       <h3>Liens utiles</h3>
       <ul>

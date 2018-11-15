@@ -35,26 +35,26 @@
 ?>
 
 <section id="contenu" class="wrap">
-  <form class="wrap" action="" method="post">
+  <form class="wrap table" action="" method="post">
 
       <label for="nom">Nom du vaccin</label>
 
-    <select  name="nom">
+    <select  name="nom" class="numlot">
       <?php foreach ($listeVaccins as $listeVaccin) { ?>
         <option value="<?= $listeVaccin['nomvaccin']; ?>"><?= $listeVaccin['nomvaccin']; ?></option>
       <?php } ?>
     </select>
     <div>
        <label for="numlot">Numéro du lot</label>
-       <input class="numlot" type="text" name="numlot" value="" placeholder="ex: H25994"><?php if(!empty($errors['numlot'])) { echo '<p class="error">' . $errors['numlot'] . '</p>'; } ?>
+       <input class="numlot ligne" type="text" name="numlot" value="" placeholder="ex: H25994"><?php if(!empty($errors['numlot'])) { echo '<p class="error">' . $errors['numlot'] . '</p>'; } ?>
     </div>
     <div>
        <label for="date">Date du vaccin</label>
-       <input type="date" name="date" value="" placeholder="ex: 2018-11-13"><?php if(!empty($errors['date'])) { echo '<p class="error">' . $errors['date'] . '</p>'; } ?>
+       <input class="numlot" type="date" name="date" value="" placeholder="ex: 2018-11-13"><?php if(!empty($errors['date'])) { echo '<p class="error">' . $errors['date'] . '</p>'; } ?>
     </div>
     <div>
        <label for="rappel">Rappel dans</label>
-       <select class="" name="rappel">
+       <select class= name="rappel">
            <option value="3 mois">3 mois</option>
            <option value="6 mois">6 mois</option>
            <option value="9 mois">9 mois</option>

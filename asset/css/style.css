@@ -32,6 +32,7 @@ body {
  #header {
   background-color: #EFFBFB;
   padding: 20px 0 5px 0;
+  margin-bottom: 20px;
 }
 
 #header .logo img {
@@ -381,6 +382,14 @@ span.psw {
 form {
   padding: 35px;
 }
+.numlot {
+  max-width: 150px;
+  height: 15px;
+  margin-left: 30px;
+}
+.ligne{
+  padding-bottom: 20px;
+}
 
 /* footer */
 #footer {
@@ -500,10 +509,4 @@ input[type=submit].sinscrire{
     #header h2 {
       padding-left: 0;
     }
-}
-.numlot {
-  max-width: 100px;
-}
-.ligne{
-  padding-bottom: 20px;
 }
