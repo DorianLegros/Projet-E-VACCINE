@@ -11,12 +11,14 @@ body {
   max-width: 1040px;
   width: 100%;
   margin : 0 auto;
+  padding: 20px;
 }
 
 .wrap-form {
   max-width: 840px;
   width: 100%;
   margin : 0 auto;
+  margin-top: 20px;
 }
 
 .error {
@@ -287,6 +289,7 @@ table.table td {
   padding: 5px 15px;
   color: white;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .btnConfirm:hover{
@@ -337,8 +340,6 @@ textarea {
 
 .container  {
     padding: 16px;
-
-
 }
 
 span.psw {
@@ -482,4 +483,10 @@ input[type=submit].sinscrire{
     #header h2 {
       padding-left: 0;
     }
+}
+.numlot {
+  max-width: 100px;
+}
+.ligne{
+  padding-bottom: 20px;
 }
