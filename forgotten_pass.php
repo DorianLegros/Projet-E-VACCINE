@@ -39,7 +39,9 @@ if(!empty($_POST['submitted'])) {
     <span class="error"><?php if(!empty($error['email'])) {echo $error['email']; } ?></span>
     <input type="text" name="email" placeholder="email *" value="<?php if(!empty($_POST['email'])) {echo $_POST['email']; } ?>">
 
-    <input class="boutonValidation" type="submit" name="submitted" value="Modifier votre mot de passe">
+    <div class="containerBtn">
+      <input class="btnConfirm" type="submit" name="submitted" value="Modifier votre mot de passe">
+    </div>
 </form>
 
 

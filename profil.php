@@ -15,13 +15,15 @@ if (isLogged()){
  ?>
 <?php include('inc/header.php'); ?>
 <div class="wrap">
+
+
   <div class="liens-paramcompte">
     <a class="lien-paracompte" href="carnet.php">Mon Carnet</a>
     <a class="lien-paracompte" href="profil.php">Paramètres</a>
   </div>
   <table>
     <tr>
-      <td>Paramètres du compte</td>
+      <td class="paraC">Paramètres du compte</td>
     </tr>
     <tr>
       <td>Login:</td>
@@ -44,7 +46,7 @@ if (isLogged()){
       <td><?php echo $user['updated_at']; ?></td>
     </tr>
   </table>
- <a href="modification.php">Modifier mon mot de passe</a>
+ <a href="modification.php" class="modifmdp">Modifier mon mot de passe</a>
 </div>
 
 <?php include('inc/footer.php'); ?>
