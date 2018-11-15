@@ -27,7 +27,7 @@ else {
 <div id="page-wrapper">
     <div class="container-fluid">
         <div class="row">
-          <h5 class="ajout-valide">Vous avez supprimé ce vaccin, il n'apparaitra donc plus.</h1>
+          <h5 class="text-success">Vous avez supprimé ce vaccin, il n'apparaitra donc plus.</h1>
         </div>
     </div>
 </div>

@@ -40,7 +40,7 @@ else {
             </form>
           <?php } ?>
           <?php if (!empty($_POST['submitted'])) { ?>
-            <h5 class="ajout-valide">Vous avez supprimé cet utilisateur, il n'apparaitra donc plus.</h1>
+            <h5 class="text-success">Vous avez supprimé cet utilisateur, il n'apparaitra donc plus.</h1>
           <?php } ?>
         </div>
     </div>
