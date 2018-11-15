@@ -16,6 +16,7 @@
       <div class="wrap">
         <div class="logo">
           <a href="index.php"><img src="asset/img/logo.png" alt="Logo E-VACCINE"></a>
+
         </div>
         <div class="titre">
           <h1>Parce que votre santé</h1>
