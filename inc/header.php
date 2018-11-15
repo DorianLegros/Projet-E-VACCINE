@@ -16,6 +16,7 @@
       <div class="wrap">
         <div class="logo">
           <a href="index.php"><img src="asset/img/logo.png" alt="Logo E-VACCINE"></a>
+
         </div>
         <div class="titre">
           <h1>Parce que votre santé</h1>
@@ -34,8 +35,10 @@
             <li><a href="carnet.php" class="dernierlien">Mon Compte</a></li>
           <?php }
           elseif (isAdminD('user', 'id', 'login', 'email', 'status', 'ip')) { ?>
+
             <li><abbr title="Se déconnecter"><a href="deconnexion.php" class="dernierlien liendeco fa fa-sign-out fa-fw"></a></abbr></li>
-            <li><a href="admin/dashboard.php" class="dernierlien">Admin</a> </li>
+            <li><abbr title="Interface Administrateur"><a href="admin/dashboard.php" class="dernierlien liendeco fa fa-wrench fa-fw"></a></abbr></li>
+            <li><a href="carnet.php" class="dernierlien">Mon Compte</a></li>
           <?php }
           else { ?>
             <li><a href="connexion.php" class="dernierlien">Connexion</a></li> <?php } ?>

@@ -29,7 +29,7 @@ body {
 
  #header {
   background-color: #EFFBFB;
-  padding: 20px 20px 5px 20px;
+  padding: 20px 0 5px 0;
 }
 
 #header .logo img {
@@ -44,6 +44,7 @@ body {
 #header .titre {
   float: right;
   padding-right: 200px;
+
 }
 
 #header h1 {
@@ -191,7 +192,7 @@ body {
 }
 
 #contenu .case-vaccin .importance-vaccin {
-  width: 20%;
+  width: 40%;
   height: 56px;
   padding-top: 20px;
 }
@@ -219,6 +220,10 @@ body {
 
 #contenu .voyage .text-voyage p {
   margin: 10px 0;
+}
+
+.liens-paramcompte .lien-paracompte {
+  width: 50%;
 }
 
 /* style tableau vaccins */
@@ -264,9 +269,6 @@ table.table td {
   background-color: #4573b4;
 }
 
-.container .btnConfirm {
-  margin: auto 45%;
-}
 
 .btnInsc {
   background-color: #1D4B8C;
@@ -275,15 +277,18 @@ table.table td {
   padding: 5px 15px;
   color: white;
   cursor: pointer;
-  margin: auto 44%;
   font-size: 1.6em;
+
 }
 
 .btnInsc:hover{
   background-color: #4573b4;
 }
 
-form {border:3px solid #ccc;  margin-top:50px;margin-bottom: 50px;border-radius: 10px;}
+/* vaccins */
+
+
+form {border:3px solid #ccc;  margin-top:50px;margin-bottom: 50px;border-radius: 10px; width:100%;}
 h2 {text-align: center; padding-top: 10px; font-weight: bold; font-size: 1.3em;}
 input[type=text], input[type=password] {
     width: 100%;
@@ -306,22 +311,46 @@ textarea {
 }
 
 
-.container {
+.container  {
     padding: 16px;
+
+
 }
 
 span.psw {
     float: right;
+<<<<<<< HEAD
     padding-bottom: 20px;
+=======
+    padding-top: 1px;
+    width:100%;
 }
+
+ /* Connexion */
+
+.pswfrg {
+  float: right;
+  font-size: .8em;
+  margin-top: 15px;
+}
+
+.wrap a{
+  width: 100%;
+}
+
+.containerBtn {
+  text-align: center;
+>>>>>>> c02545a03b5c97c0a8603587e3f29e5d8499c6af
+}
+
 
 
 /* footer */
 #footer {
   height: 300px;
   background-color: #EFFBFB;
-  position: bottom: 0; left: 0; right: 0;
   margin-top: 20px;
+  width: 100%;
 }
 
 #footer a {
@@ -367,16 +396,14 @@ span.psw {
   background-color:#fff;
   cursor: pointer;
 }
-
 #footer .copyright{
   text-align: center;
 }
+
+
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
+
     .cancelbtn {
        width: 100%;
     }
@@ -414,6 +441,7 @@ input[type=submit].sinscrire{
 /* Add padding to container elements */
 .container {
     padding: 16px;
+
 }
 
 /* Clear floats */

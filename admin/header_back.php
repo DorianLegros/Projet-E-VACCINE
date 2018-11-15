@@ -14,6 +14,8 @@
 
     <title>E-VACCINE ADMIN</title>
 
+
+
     <!-- Bootstrap Core CSS -->
     <link href="../asset/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -25,6 +27,7 @@
 
     <!-- Custom Fonts -->
     <link href="../asset/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +50,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../index.php">SB Admin v2.0</a>
+                <a class="navbar-brand" href="../index.php">E-Vaccine Interface Administrateur</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -63,6 +66,7 @@
 
 
                         <li><a href="../index.php"><i class="fa fa-desktop fa-fw"></i> Site client</a></li> </li>
+                        <li><a href="../profil.php"><i class="fa fa-gear fa-fw"></i> Paramètres du compte</a></li> </li>
                         <li class="divider"></li>
                         <li><a href="../deconnexion.php"><i class="fa fa-sign-out fa-fw"></i>Se déconnecter</a>
                         </li>
