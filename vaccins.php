@@ -20,9 +20,11 @@
             foreach($vaccins as $vaccin )  { ?>
               <div class="case-vaccin">
                 <h3 class="nom-vaccin"><?= $vaccin['nomvaccin']; ?></h3>
+                <div class="clear"></div>
                 <p class="desc-vaccin"><?= $vaccin['description']; ?></p>
                 <?php if ($vaccin['importance'] == 'facultatif'){ ?>
                   <abbr title="Facultatif"><div class="importance-vaccin vac-fac"><p>Facultatif</p></div></abbr>
+
                 <?php } ?>
                 <?php if ($vaccin['importance'] == 'recommandé'){ ?>
                   <abbr title="Recommandé"><div class="importance-vaccin vac-rec"><p>Recommandé</p></div></abbr>
