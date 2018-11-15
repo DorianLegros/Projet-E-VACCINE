@@ -34,9 +34,12 @@
       include('inc/header.php');
 ?>
 
-<section id="contenu">
-  <form class="" action="" method="post">
-    <label for="nom">Nom du vaccin</label><select class="" name="nom">
+<section id="contenu" class="wrap">
+  <form class="wrap" action="" method="post">
+
+      <label for="nom">Nom du vaccin</label>
+
+    <select  name="nom">
       <?php foreach ($listeVaccins as $listeVaccin) { ?>
         <option value="<?= $listeVaccin['nomvaccin']; ?>"><?= $listeVaccin['nomvaccin']; ?></option>
       <?php } ?>

@@ -121,13 +121,17 @@ if(count($error) == 0) {
     <span class="error"><?php if(!empty($error['check'])) {echo $error['check']; }  ?></span>
     <input type="checkbox" name="check">J'ai lu et j'accepte les <a href="#">Terms & Conditions</a>.</input>
 
-    <div class="container">
-     <input class="btnConfirm" type="submit" name="submitted" class="connexion" value="S'inscrire"></input>
+      <div class="containerBtn">
+        <input class="btnConfirm" type="submit" name="submitted" class="connexion" value="S'inscrire"></input>
 
-   </div>
+      </div>
+
   </div>
 </form>
-     <a href="connexion.php"><input class="btnConfirm" type="submit" name="submit" class="sinscrire" value="Se connecter"></input></a>
+    <div class="containerBtn">
+
+      <a href="connexion.php"><input class="btnConfirm" type="submit" name="submit" class="sinscrire" value="Se connecter"></input></a>
+    </div>
 </div>
 
 <?php include('inc/footer.php'); ?>

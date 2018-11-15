@@ -15,6 +15,8 @@ if (isLogged()){
  ?>
 <?php include('inc/header.php'); ?>
 <div class="wrap">
+
+
   <div class="liens-paramcompte">
     <a class="lien-paracompte" href="carnet.php">Carnet</a>
     <a class="lien-paracompte" href="profil.php">Paramètres</a>
@@ -50,8 +52,7 @@ if (isLogged()){
     </tr>
 
   </table>
-  </form>
- <a href="modification.php">Modifier mon mot de passe</a>
+ <a href="modification.php" class="modifmdp">Modifier mon mot de passe</a>
 </div>
 
 <?php include('inc/footer.php'); ?>

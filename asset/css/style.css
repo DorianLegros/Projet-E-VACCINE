@@ -18,6 +18,7 @@ body {
   max-width: 840px;
   width: 100%;
   margin : 0 auto;
+  margin-top: 20px;
 }
 
 .error {
@@ -250,7 +251,7 @@ body {
   margin: 10px 0;
 }
 
-
+/* carnet */
 .liens-paramcompte {
   margin-top: 30px;
   height: 50px;
@@ -269,6 +270,7 @@ body {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
+
 }
 
 .liens-paramcompte .lien-paracompte:active {
@@ -313,6 +315,7 @@ table.table td {
   padding: 5px 15px;
   color: white;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .btnConfirm:hover{
@@ -366,11 +369,18 @@ textarea {
   box-sizing: border-box;
 }
 
+/* profil */
 
+a.modifmdp{
+  font-size: .9em;
+
+}
+
+td.paraC{
+padding-top: 70px;
+}
 .container  {
     padding: 16px;
-
-
 }
 
 span.psw {
@@ -394,6 +404,12 @@ span.psw {
 
 .containerBtn {
   text-align: center;
+  margin-top: 15px;
+}
+
+/* forgotten_pass */
+form {
+  padding: 35px;
 }
 
 /* footer */
@@ -525,4 +541,10 @@ input[type=submit].sinscrire{
     .btnConfirm {
       font-size: 0.5em;
     }
+}
+.numlot {
+  max-width: 100px;
+}
+.ligne{
+  padding-bottom: 20px;
 }
