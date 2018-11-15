@@ -37,7 +37,7 @@
           elseif (isAdminD('user', 'id', 'login', 'email', 'status', 'ip')) { ?>
 
             <li><abbr title="Se déconnecter"><a href="deconnexion.php" class="dernierlien liendeco fa fa-sign-out fa-fw"></a></abbr></li>
-            <li><a href="admin/dashboard.php" class="dernierlien liendeco fa fa-wrench fa-fw"></a> </li>
+            <li><abbr title="Interface Administrateur"><a href="admin/dashboard.php" class="dernierlien liendeco fa fa-wrench fa-fw"></a></abbr></li>
             <li><a href="carnet.php" class="dernierlien">Mon Compte</a></li>
           <?php }
           else { ?>
