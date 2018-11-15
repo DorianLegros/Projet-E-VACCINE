@@ -22,11 +22,14 @@ if(isLogged()){
 <!--  affichage du carnet-->
 <div class="wrap">
   <div class="liens-paramcompte">
-    <a class="lien-paracompte" href="carnet.php">Mon Carnet</a>
+    <a class="lien-paracompte" href="carnet.php">Carnet</a>
     <a class="lien-paracompte" href="profil.php">Paramètres</a>
   </div>
+  <div class="clear">
 
-  <form action="" method="post">
+  </div>
+
+  <form class="sans-margin" action="" method="post">
     <div class="container">
       <input class="btnConfirm" type="submit" name="submitted" value="Ajouter un vaccin">
       <table class="table">

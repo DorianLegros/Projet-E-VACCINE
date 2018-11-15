@@ -6,6 +6,6 @@
 
 <?php include('inc/header.php'); ?>
 
-<p>Erreur 403, vous n'avez pas les droits nécessaires pour accéder à cette page !</p>
+<p class="er404"><span class="maj">Erreur 403</span> vous n'avez pas les droits nécessaires pour accéder à cette page !</p>
 
 <?php include('inc/footer.php'); ?>

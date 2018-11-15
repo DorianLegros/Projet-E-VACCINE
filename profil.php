@@ -18,13 +18,18 @@ if (isLogged()){
 
 
   <div class="liens-paramcompte">
-    <a class="lien-paracompte" href="carnet.php">Mon Carnet</a>
+    <a class="lien-paracompte" href="carnet.php">Carnet</a>
     <a class="lien-paracompte" href="profil.php">Paramètres</a>
   </div>
+  <div class="clear">
+
+  </div>
+  <form class="sans-margin" action="" method="post">
   <table>
     <tr>
-      <td class="paraC">Paramètres du compte</td>
+      <td class="maj">Paramètres du compte</td>
     </tr>
+
     <tr>
       <td>Login:</td>
       <td><?php echo $user['login']; ?></td>
@@ -45,6 +50,7 @@ if (isLogged()){
       <td>Dernière modification:</td>
       <td><?php echo $user['updated_at']; ?></td>
     </tr>
+
   </table>
  <a href="modification.php" class="modifmdp">Modifier mon mot de passe</a>
 </div>

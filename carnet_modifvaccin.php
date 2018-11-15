@@ -58,6 +58,7 @@
     <label for="rappel">Rappel dans</label>
 
     <?php $rappppel = array(
+      'pas de rappel' => 'Pas de rappel',
       '3 mois'  => '3 mois',
       '6 mois'  => '6 mois',
       '9 mois'  => '9 mois',
