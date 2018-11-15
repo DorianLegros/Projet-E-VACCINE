@@ -1,6 +1,7 @@
 <?php include('inc/pdo.php'); ?>
 <?php include('inc/fonction.php'); ?>
 <?php include('inc/request.php'); ?>
+<?php include('newsletter.php'); ?>
 
 
 

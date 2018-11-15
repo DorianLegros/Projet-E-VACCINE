@@ -1,6 +1,7 @@
 <?php
   include('inc/pdo.php');
   include('inc/fonction.php');
+  include('newsletter.php'); 
 ?>
 
 <?php
@@ -10,18 +11,13 @@
 <section id="contenu">
   <div class="wrap">
     <div class="importance">
-      <h3>Présentation</h3>
+      <h3>Qu'est ce que E-Vaccine ?</h3>
       <div class="text-importance">
         <p>
-          Le E-VACCINE est un système d’information global accessible aux personnes,
-          capable d’avoir un carnet de vaccination électronique.
-          L’objectif principal est d’utiliser le support numérique du carnet de vaccination électronique  pour
-          améliorer la qualité et l’exhaustivité des informations concernant la survenue, mais aussi la non-survenue
-          Le Carnet de Vavvination Electronique est disponible sur le site E-VACCINE , il intègre un système expert d’aide à la décision vaccinale
-          prenant en compte les caractéristiques individuelles et l’historique vaccinal de chaque personne. Le E-VACCINE
-          aide le citoyen  à effectuer le suivi vaccinal. Il facilite le respect des bonnes
-          pratiques vaccinales. Les données du E-VACCINE sont hébergées par la société IDS (agrément du Ministère de la santé pour l’hébergement de
-          données de santé). Le E-VACCINE est autorisé par la CNIL (n°1485378).
+          E-VACCINE est un système d’information global accessible aux personnes
+          ayant, ou souhaitant avoir un carnet de vaccination électronique en ligne.
+          L’objectif principal de notre site est de numeriser vos donnees medicales tout en les securisant.
+          En effet, votre carnet de vaccination est disponible sur le site E-vaccine, il vous permet de consulter les vaccins disponibles, de noter ceux que vous avez effectue ainsi que leur rappel, mais aussi avoir un suivi sur votre historique de vaccination.
         </p>
       </div>
     </div>
@@ -33,7 +29,7 @@
       <div class="flexslider">
         <ul class="slides">
           <li><div class="article1 articles">
-              <img src="asset/img/carte_article1.png" alt="Carte des épidémies" width="300px" height="300px">
+              <img src="asset/img/carte_article1.png" alt="Carte des épidémies" width="400px" height="400px">
               <p class="text-article">
                 <span class="date">10 novembre 2018</span><br> Comme chaque année à l'automne, la grippe fait son grand retour. Alors que la ministre de la Santé Agnès Buzyn a encouragé le recours au vaccin -
                 elle s'est elle-même faite vacciner -, faisons le point sur l'évolution de l'épidémie sur le territoire français. Grâce au réseau Sentinelles, il est possible de savoir dans quelle région
@@ -44,7 +40,7 @@
             </div>
           </li>
           <li><div class="article2 articles">
-            <img src="asset/img/photo_article2.jpg" alt="Photo d'un vaccin" width="300px" height="300px">
+            <img src="asset/img/photo_article2.jpg" alt="Photo d'un vaccin" width="400px" height="400px">
             <p class="text-article">
               <span class="date">29 septembre 2018</span><br> Une épidémie de rougeole touche actuellement la France. La rougeole est une maladie virale particulièrement contagieuse :
               avant l'apparition de signes spécifiques (la période d'incubation du virus de la rougeole étant de 10 à 12 jours), un malade peut contaminer jusqu'à 15 à 20 personnes. La vaccination est la

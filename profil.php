@@ -1,11 +1,14 @@
 <?php include('inc/pdo.php'); ?>
 <?php include('inc/fonction.php'); ?>
 <?php include('inc/request.php'); ?>
+<?php include('newsletter.php') ?>
 <?php
 
+
 if (isLogged()){
- //faire appel à la fonction getUser
- $user =getUser();
+  //fonction pour récupérer les informations de l'utilisateurs
+  $user = getUser();
+
 }else{
   header('Location: 404.php');
 }
@@ -25,8 +28,11 @@ if (isLogged()){
       <td><?php echo $user['email']; ?></td>
     </tr>
     <tr>
-      <td>Age:</td>
-      <td><?php if($user['age'] == 0){echo 'Age non renseigner'; }else{echo $user['age']; }; ?></td>
+      <td>Age:
+        <input type="text" class="age" name="" placeholder="Renseigner votre age" value="">
+        <input class="btnConfirm" type="submit" name="submited" value="Confirmer"></td>
+
+      <td><?php if($user['age'] == 0){echo $user['age']; }else{echo $user['age']; }; ?></td>
     </tr>
     <tr>
       <td>Mot de passe: </td>

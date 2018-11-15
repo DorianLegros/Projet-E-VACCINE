@@ -1,17 +1,14 @@
 <?php include('inc/fonction.php'); ?>
 <?php include('inc/pdo.php'); ?>
 <?php include('inc/request.php'); ?>
+<?php include('newsletter.php'); ?>
 
 <?php
 
 $idUser = $_SESSION['user']['id'];
-$id = $_GET['id'];
-
-
 $verifIdUser = getVerifIdUser();
 
 if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
-
     $verifId = getVerifId();
     if (!empty($verifId)) {
       if ($verifIdUser['id_user'] != $idUser) {

@@ -1,6 +1,7 @@
 <?php include('inc/pdo.php') ?>
 <?php include('inc/fonction.php') ?>
 <?php include('inc/request.php') ?>
+<?php include('newsletter.php') ?>
 
 <?php
 $error=array();
@@ -51,7 +52,7 @@ if (!empty($_GET['email']) && !empty($_GET['token'])) {
   <label for="">Confirmer votre nouveau mot de passe *</label>
   <input type="password" name="mdp2" value="">
 
-  <input type="submit" name="submitted" value="Confirmer">
+  <input class="btnConfirm" type="submit" name="submitted" value="Confirmer">
 </form>
 
 <?php include('inc/footer.php'); ?>

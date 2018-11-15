@@ -2,6 +2,7 @@
   <?php include('inc/pdo.php'); ?>
   <?php include('inc/fonction.php'); ?>
   <?php include('inc/request.php'); ?>
+  <?php include('newsletter.php'); ?>
   <?php
 
   $error=array();
@@ -20,11 +21,6 @@
     }else{
     $error['login'] = 'Veuillez vous inscrire';
     }
-            // cookie
-
-if(!empty($_POST['remember'])) {
-  setcookie('auth', $user['id'] . '-----' . sha1($user['login'] . $user['mdp']), time() + 3600 * 24 * 3, '/', 'localhost', false, true);
-}
 
     if(count($error) == 0) {
       $_SESSION['user'] = array(
@@ -34,12 +30,10 @@ if(!empty($_POST['remember'])) {
         'status' => $user['status'],
         'ip' => $_SERVER['REMOTE_ADDR']
       );
-      // print_r($_SESSION);
       header('Location: index.php');
     }
 
   }
-  // debug($error);
   ?>
 
   <?php include('inc/header.php'); ?>
@@ -47,26 +41,26 @@ if(!empty($_POST['remember'])) {
   <!-- formulaire de connexion -->
   <div class="wrap">
   <form action="" class="connexion" method="post">
-    <h2 >Connexion</h2>
+    <h2>Connexion</h2>
     <div class="container">
 
       <label for="login"><b>Login</b></label>
       <span class="error"><?php if(!empty($error['login'])) {echo $error['login']; } ?></span>
-      <input type="text" placeholder="Pseudo ou mail *" value="<?php if(!empty($_POST['login'])) { echo $_POST['login'] ;} ?>" name="login">
+      <input type="text" placeholder="Pseudo ou email" value="<?php if(!empty($_POST['login'])) { echo $_POST['login'] ;} ?>" name="login">
 
       <label for="mdp"><b>Mot de passe</b></label>
       <span class="error"><?php if(!empty($error['mdp'])) {echo $error['mdp']; } ?></span>
-      <input type="password" placeholder="Entrer votre mot de passe" name="mdp" >
+      <input type="password" placeholder="Saisissez votre mot de passe" name="mdp" >
 
       <div class="container">
-        <label><input type="checkbox" name="remember" value="yes">Se souvenir de moi<br></label>
-       <input type="submit" name="submitted" class="connexion" value="Se connecter"></input>
+       <input class="btnConfirm" type="submit" name="submitted"  value="Se connecter"></input>
 
        <span class="psw"><a href="forgotten_pass.php">Mot de passe oublié?</a></span>
      </div>
     </div>
   </form>
-      <a href="inscription.php"><input type="submit" name"submit" class="sinscrire" value="S'inscrire"></input></a>
+
+      <a href="inscription.php"><input class="btnInsc" type="submit" name"submit" class="sinscrire" value="S'inscrire"></input></a>
   </div>
 
   <?php include('inc/footer.php'); ?>

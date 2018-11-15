@@ -92,21 +92,94 @@ function getVerifIdUser()
 //fonction pour récupérer id
 function getVerifId(){
  global $pdo;
+ $id = $_GET['id'];
 $sql = "SELECT id FROM v2_carnets WHERE id = $id";
 $query = $pdo -> prepare($sql);
 $query -> execute();
 $verifId = $query -> fetch();
 return $verifId;
 }
-//fonction de suppression 
+//fonction de suppression
  function DeleteVaccin(){
    global $pdo;
+   $id = $_GET['id'];
 $sql = "DELETE FROM v2_carnets WHERE id = $id";
 $query = $pdo -> prepare($sql);
 $query -> execute();
  }
 //
-// function (){
-//   global $pdo;
-//
-// }
+function getVaccin(){
+  global $pdo;
+  $sql = "SELECT nomvaccin FROM v2_vaccins";
+  $query = $pdo -> prepare($sql);
+  $query -> execute();
+  $listeVaccins = $query -> fetchAll();
+  return $listeVaccins;
+}
+//fonction update vaccin
+ function UpdateVaccin(){
+   global $pdo;
+   $id = $_GET['id'];
+
+   $sql = "UPDATE v2_carnets SET datevaccin='$datevaccin', rappelvaccin='$rappelvaccin', etat='$etatvaccin', num_lot=:Numlot, updated_at=NOW()
+   WHERE id='$id'";
+   $query = $pdo -> prepare($sql);
+   $query -> bindValue(':Numlot', $numeroLot, PDO::PARAM_STR);
+   $query -> execute();
+ }
+
+ function Carnet()
+ {
+   global $pdo;
+   $idCarnet = trim(strip_tags($_GET['id']));
+   $sql = "SELECT * FROM v2_carnets WHERE id = '$idCarnet'";
+   $query = $pdo -> prepare($sql);
+   $query -> execute();
+   $carnet = $query -> fetch();
+   return $carnet;
+ }
+
+ function getIdVaccin()
+ {
+   global $pdo;
+   $nomVaccin = $_POST['nom'];
+   $sql = "SELECT id FROM v2_vaccins WHERE nomvaccin='$nomVaccin'";
+   $query = $pdo -> prepare($sql);
+   $query -> execute();
+   $idVaccins = $query -> fetch();
+   return $idVaccins;
+ }
+
+
+  function updateCarnet()
+  {
+    global $pdo;
+    $datevaccin = trim(strip_tags($_POST['date']));
+    $numeroLot = trim(strip_tags($_POST['numlot']));
+    $rappelvaccin = $_POST['rappel'];
+    $etatvaccin = $_POST['etat'];
+    $id = $_GET['id'];
+
+    $sql = "UPDATE v2_carnets SET datevaccin='$datevaccin', rappelvaccin='$rappelvaccin', etat='$etatvaccin', num_lot=:Numlot, updated_at=NOW()
+    WHERE id='$id'";
+    $query = $pdo -> prepare($sql);
+    $query -> bindValue(':Numlot', $numeroLot, PDO::PARAM_STR);
+    $query -> execute();
+  }
+
+  function addVaccin()
+  {
+    global $pdo;
+    $numeroLot = trim(strip_tags($_POST['numlot']));
+    $datevaccin = trim(strip_tags($_POST['date']));
+    $rappelvaccin = $_POST['rappel'];
+    $iduser = $_SESSION['user']['id'];
+    $idVaccins = getIdVaccin();
+    $idvaccin = $idVaccins['id'];
+
+    $sql = "INSERT INTO v2_carnets (datevaccin, rappelvaccin, etat, id_user, id_vaccins, num_lot, created_at)
+    VALUES ('$datevaccin', '$rappelvaccin', 'pasfait', '$iduser', '$idvaccin', :Numlot, NOW())";
+    $query = $pdo -> prepare($sql);
+    $query -> bindValue(':Numlot', $numeroLot, PDO::PARAM_STR);
+    $query -> execute();
+  }

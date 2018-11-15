@@ -1,3 +1,4 @@
+<?php include('newsletter.php') ?>
 <footer id=footer>
   <div class="wrap">
 
@@ -14,11 +15,23 @@
       <h3>Contact</h3>
       <ul>
         <li>24 Place Saint-Marc, 76000 Rouen</li>
-        <li>02.35.00.00</li>
-        <li>e_vaccine@gmail.fr</li>
-        <li><a href="index.php">Htpps://www.e_vaccine.fr</a></li>
+        <li>02.35.00.00.00</li>
+        <li>e-vaccine@gmail.fr</li>
+        <li><a href="index.php">https://www.e-vaccine.fr</a></li>
       </ul>
     </div>
+
+    <form class="sectionx" action="" method="post">
+       <div class="label">
+         <label>RECEVEZ NOTRE NEWSLETTER</label>
+       </div>
+      <div class="champ">
+        <p>Inscrivez-vous pour recevoir nos acctualités</p>
+        <span class="error"><?php if(!empty($erreur['email'])) {echo $erreur['email']; }  ?></span>
+        <input type="text" placeholder="exemple@gmail.com" name="newsletter" value="<?php if(!empty($_POST['email'])) { echo $_POST['email']; } ?>">
+       <input type="submit" name="newsletterform" value="S'inscrire">
+      </div>
+   </form>
 
 
     <div class="clear"></div>

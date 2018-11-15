@@ -1,6 +1,7 @@
 <?php include('inc/pdo.php'); ?>
 <?php include('inc/fonction.php'); ?>
 <?php include('inc/request.php'); ?>
+<?php include('newsletter.php') ?>
 <?php $error=array();
 
 
@@ -61,15 +62,17 @@ header('Location: 403.php');
 <form class="wrap" action="" method="post">
   <label for="">Votre ancien mot de passe</label>
   <span class="error"><?php if(!empty($error['mdp'])) {echo $error['mdp']; } ?></span>
-  <input type="text" name="mdp" value="">
+  <input type="password" name="mdp" value="">
 
   <label for="">Nouveau mot de passe</label>
-  <input type="text" name="newmdp" value="">
+  <span class="error"><?php if(!empty($error['newmdp'])) {echo $error['newmdp']; } ?></span>
+  <input type="password" name="newmdp" value="">
 
   <label for="">Confirmer votre nouveau mot de passe</label>
-  <input type="text" name="newmdp2" value="">
+  <span class="error"><?php if(!empty($error['newmdp'])) {echo $error['newmdp']; } ?></span>
+  <input type="password" name="newmdp2" value="">
 
-  <input type="submit" name="submitted" value="Confirmer">
+  <input class="btnConfirm" type="submit" name="submitted" value="Confirmer">
 </form>
 
 <?php
