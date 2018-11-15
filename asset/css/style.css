@@ -35,16 +35,24 @@ body {
 #header .logo img {
   width: 120px;
   height: 120px;
+<<<<<<< HEAD
   margin-right: 20px;
+=======
+  margin-right: 250px;
+>>>>>>> 53346ae12c4304868b4f4cf9bff06928309c4e4e
   float: left;
 }
 #header .logo img:hover {
   transform: rotate(5deg) scale(.9);
 }
 #header .titre {
+<<<<<<< HEAD
   float: right;
   padding-right: 200px;
 
+=======
+  float: left;
+>>>>>>> 53346ae12c4304868b4f4cf9bff06928309c4e4e
 }
 
 #header h1 {
@@ -87,8 +95,11 @@ body {
 }
 
 #header .menunav ul li .liendeco {
-  width: 5%;
+  width: 40px;
   height: 40px;
+  text-align: center;
+  position:relative;
+
 }
 
 #header .menunav ul li a:hover {
@@ -99,6 +110,11 @@ body {
 #header .menunav ul li .dernierlien:hover {
   background-color: #4573b4;
 }
+
+.menunav ul li a.liendeco i{
+  position: absolute;top:11px;left:11px;
+}
+
 
 
 #contenu {
@@ -319,9 +335,7 @@ textarea {
 
 span.psw {
     float: right;
-<<<<<<< HEAD
     padding-bottom: 20px;
-=======
     padding-top: 1px;
     width:100%;
 }
@@ -340,7 +354,6 @@ span.psw {
 
 .containerBtn {
   text-align: center;
->>>>>>> c02545a03b5c97c0a8603587e3f29e5d8499c6af
 }
 
 
