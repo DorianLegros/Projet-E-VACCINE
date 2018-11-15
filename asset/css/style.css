@@ -35,24 +35,15 @@ body {
 #header .logo img {
   width: 120px;
   height: 120px;
-<<<<<<< HEAD
   margin-right: 20px;
-=======
-  margin-right: 250px;
->>>>>>> 53346ae12c4304868b4f4cf9bff06928309c4e4e
   float: left;
 }
 #header .logo img:hover {
   transform: rotate(5deg) scale(.9);
 }
 #header .titre {
-<<<<<<< HEAD
   float: right;
   padding-right: 200px;
-
-=======
-  float: left;
->>>>>>> 53346ae12c4304868b4f4cf9bff06928309c4e4e
 }
 
 #header h1 {
