@@ -4,12 +4,12 @@
 <?php include('header_back.php') ?>
 
 <?php
-$sql = "SELECT * FROM v2_user WHERE 1=1";
+$sql = "SELECT * FROM v2_user LIMIT 20";
 $query = $pdo -> prepare($sql);
 $query -> execute();
 $tableUsers = $query -> fetchAll();
 
-$sql = "SELECT * FROM v2_vaccins WHERE 1=1";
+$sql = "SELECT * FROM v2_vaccins LIMIT 20";
 $query = $pdo -> prepare($sql);
 $query -> execute();
 $tableVaccins = $query -> fetchAll();

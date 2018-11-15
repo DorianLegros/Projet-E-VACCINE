@@ -21,20 +21,20 @@
       </ul>
     </div>
 
-    <form class="sectionx" action="" method="post">
-       <div class="label">
-         <label>RECEVEZ NOTRE NEWSLETTER</label>
-       </div>
+    <div class="sectionx div3">
+      <h3>NEWSLETTER</h3>
       <div class="champ">
+
+
+
         <p>Inscrivez-vous pour recevoir nos actualités</p>
         <span class="error"><?php if(!empty($erreur['email'])) {echo $erreur['email']; }  ?></span>
+        <form class="" action="" method="post">
         <input type="text" placeholder="exemple@gmail.com" name="newsletter" value="<?php if(!empty($_POST['email'])) { echo $_POST['email']; } ?>">
        <input type="submit" name="newsletterform" value="S'inscrire" class="btnConfirm">
+       </form>
       </div>
-   </form>
-
-
-
+   </div>
     <div>
       <p class="copyright">Copyright 2018 E-Vaccine&copy; Theme.</p>
     </div>

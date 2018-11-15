@@ -33,7 +33,7 @@ if(isLogged()) {
 
               if (count($error) == 0){
                 $hash = password_hash($newmdp, PASSWORD_DEFAULT);
-                $sql = "UPDATE v2_user SET mdp = :mdp WHERE id = :id";
+                $sql = "UPDATE v2_user SET mdp = :mdp, updated_at = NOW() WHERE id = :id";
                 $query = $pdo -> prepare($sql);
                 $query -> bindValue(':mdp',$hash,PDO::PARAM_STR);
                 // $query -> bindValue(':newmdp', $newmdp, PDO::PARAM_STR);
