@@ -35,14 +35,24 @@ body {
 #header .logo img {
   width: 120px;
   height: 120px;
+<<<<<<< HEAD
+  margin-right: 20px;
+=======
   margin-right: 250px;
+>>>>>>> 53346ae12c4304868b4f4cf9bff06928309c4e4e
   float: left;
 }
 #header .logo img:hover {
   transform: rotate(5deg) scale(.9);
 }
 #header .titre {
+<<<<<<< HEAD
+  float: right;
+  padding-right: 200px;
+
+=======
   float: left;
+>>>>>>> 53346ae12c4304868b4f4cf9bff06928309c4e4e
 }
 
 #header h1 {
@@ -57,7 +67,7 @@ body {
   font-weight: bold;
   font-size: 1.5em;
   letter-spacing: 0.1em;
-  padding-left: 150px;
+  padding-left: 150px;;
 }
 
 #header .menunav {
@@ -114,7 +124,7 @@ body {
 #contenu h3 {
   font-size: 1.4em;
   text-transform: uppercase;
-  margin: 40px 0 10px 0;
+  margin: 40px 20px 10px 0;
 }
 
 
@@ -325,6 +335,7 @@ textarea {
 
 span.psw {
     float: right;
+    padding-bottom: 20px;
     padding-top: 1px;
     width:100%;
 }
@@ -349,9 +360,8 @@ span.psw {
 
 /* footer */
 #footer {
-  height: 270px;
+  height: 300px;
   background-color: #EFFBFB;
-  position: bottom: 0; left: 0; right: 0;
   margin-top: 20px;
   width: 100%;
 }
@@ -399,11 +409,10 @@ span.psw {
   background-color:#fff;
   cursor: pointer;
 }
-
-
 #footer .copyright{
   text-align: center;
 }
+
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {

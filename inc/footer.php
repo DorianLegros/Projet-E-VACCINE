@@ -34,10 +34,11 @@
    </form>
 
 
-    <div class="clear"></div>
+
     <div>
       <p class="copyright">Copyright 2018 E-Vaccine&copy; Theme.</p>
     </div>
+    <div class="clear"></div>
   </div>
 </footer>
 
