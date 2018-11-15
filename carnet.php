@@ -21,7 +21,10 @@ if(isLogged()){
 <?php include('inc/header.php'); ?>
 <!--  affichage du carnet-->
 <div class="wrap">
-  <a href="profil.php">Mon profil</a>
+  <div class="liens-paramcompte">
+    <a class="lien-paracompte" href="carnet.php">Mon Carnet</a>
+    <a class="lien-paracompte" href="profil.php">Paramètres</a>
+  </div>
 
   <form action="" method="post">
     <div class="container">

@@ -29,7 +29,7 @@
         <p>Inscrivez-vous pour recevoir nos actualités</p>
         <span class="error"><?php if(!empty($erreur['email'])) {echo $erreur['email']; }  ?></span>
         <input type="text" placeholder="exemple@gmail.com" name="newsletter" value="<?php if(!empty($_POST['email'])) { echo $_POST['email']; } ?>">
-       <input type="submit" name="newsletterform" value="S'inscrire">
+       <input type="submit" name="newsletterform" value="S'inscrire" class="btnConfirm">
       </div>
    </form>
 
@@ -38,8 +38,9 @@
     <div>
       <p class="copyright">Copyright 2018 E-Vaccine&copy; Theme.</p>
     </div>
-    <div class="clear"></div>
+
   </div>
+  <div class="clear"></div>
 </footer>
 
 <script

@@ -115,7 +115,8 @@ body {
 #contenu h3 {
   font-size: 1.4em;
   text-transform: uppercase;
-  margin: 40px 20px 10px 0;
+  padding-left: 15px;
+  margin: 40px 0 10px 0;
 }
 
 
@@ -126,15 +127,19 @@ body {
   background-color: #EFFBFB;
   box-shadow: 3px 3px #ccc;
   border-radius: 20px;
-  height: 450px;
 }
 
 #contenu .actus img {
   float: left;
+  max-width: 400px;
+  width: 100%;
+  min-width: 100px;
+  max-height: 400px;
 }
 
 #contenu .actus .articles .text-article {
-  width: 58%;
+  max-width: 570px;
+  width: 100%;
   float: right;
   margin-top: 10px;
   line-height: 1.5em;
@@ -229,9 +234,22 @@ body {
   margin: 10px 0;
 }
 
-.liens-paramcompte .lien-paracompte {
-  width: 50%;
+
+.liens-paramcompte {
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
 }
+
+.liens-paramcompte .lien-paracompte {
+  background-color: #1D4B8C;
+  margin-top: 20px;
+  padding: 10px 50px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
 
 /* style tableau vaccins */
 table.table {
@@ -347,11 +365,8 @@ span.psw {
   text-align: center;
 }
 
-
-
 /* footer */
 #footer {
-  height: 300px;
   background-color: #EFFBFB;
   margin-top: 20px;
   width: 100%;
@@ -389,17 +404,7 @@ span.psw {
   color:#D7DBDD;
   width: 250px;
 }
-#footer form input[type=submit] {
-  color: #fff;
-  background-color:#63C0C7;
-  border-radius: 20%;
 
-}
-#footer form input[type=submit]:hover {
-  color: #63C0C7;
-  background-color:#fff;
-  cursor: pointer;
-}
 #footer .copyright{
   text-align: center;
 }

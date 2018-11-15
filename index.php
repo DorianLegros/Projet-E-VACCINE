@@ -1,7 +1,7 @@
 <?php
   include('inc/pdo.php');
   include('inc/fonction.php');
-  include('newsletter.php'); 
+  include('newsletter.php');
 ?>
 
 <?php
@@ -29,7 +29,7 @@
       <div class="flexslider">
         <ul class="slides">
           <li><div class="article1 articles">
-              <img src="asset/img/carte_article1.png" alt="Carte des épidémies" width="400px" height="400px">
+              <img src="asset/img/carte_article1.png" alt="Carte des épidémies">
               <p class="text-article">
                 <span class="date">10 novembre 2018</span><br> Comme chaque année à l'automne, la grippe fait son grand retour. Alors que la ministre de la Santé Agnès Buzyn a encouragé le recours au vaccin -
                 elle s'est elle-même faite vacciner -, faisons le point sur l'évolution de l'épidémie sur le territoire français. Grâce au réseau Sentinelles, il est possible de savoir dans quelle région
@@ -40,7 +40,7 @@
             </div>
           </li>
           <li><div class="article2 articles">
-            <img src="asset/img/photo_article2.jpg" alt="Photo d'un vaccin" width="400px" height="400px">
+            <img src="asset/img/photo_article2.jpg" alt="Photo d'un vaccin">
             <p class="text-article">
               <span class="date">29 septembre 2018</span><br> Une épidémie de rougeole touche actuellement la France. La rougeole est une maladie virale particulièrement contagieuse :
               avant l'apparition de signes spécifiques (la période d'incubation du virus de la rougeole étant de 10 à 12 jours), un malade peut contaminer jusqu'à 15 à 20 personnes. La vaccination est la
