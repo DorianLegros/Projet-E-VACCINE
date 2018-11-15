@@ -5,10 +5,10 @@
 ?>
 <?php include('newsletter.php') ?>
 <?php
+      include('inc/header.php');
     // faire appel à la fonction getAllvaccins()
-    $vaccins= getAllvaccins()
- ?>
-      <?php include('inc/header.php'); ?>
+    $vaccins= getAllvaccins();
+if (!empty($vaccins)) { ?>
 
       <section id ="contenu">
 
@@ -38,4 +38,16 @@
         </div>
       </section>
 
-  <?php include('inc/footer.php'); ?>
+
+<?php }else{ ?>
+  <section id="contenu">
+    <div class="wrap">
+          <p>
+            Il n'y a pas de vaccins disponibles dans notre base de données
+          </p>
+    </div>
+  </section>
+
+<?php }
+
+ include('inc/footer.php');
