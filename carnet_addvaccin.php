@@ -44,6 +44,7 @@
     <label for="numlot">Numéro du lot</label><input type="text" name="numlot" value="" placeholder="ex: H25994"><?php if(!empty($errors['numlot'])) { echo '<p class="error">' . $errors['numlot'] . '</p>'; } ?>
     <label for="date">Date du vaccin</label><input type="date" name="date" value="" placeholder="ex: 2018-11-13"><?php if(!empty($errors['date'])) { echo '<p class="error">' . $errors['date'] . '</p>'; } ?>
     <label for="rappel">Rappel dans</label><select class="" name="rappel">
+      <option value="pas de rappel">Pas de rappel</option>
       <option value="3 mois">3 mois</option>
       <option value="6 mois">6 mois</option>
       <option value="9 mois">9 mois</option>

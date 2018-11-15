@@ -21,6 +21,7 @@
         </p>
       </div>
     </div>
+  </div>
 
 
   <div class="wrap">
@@ -50,6 +51,7 @@
             </p>
           </div>
         </li>
+      </div>
     </div>
   </div>
   <div class="clear"></div>

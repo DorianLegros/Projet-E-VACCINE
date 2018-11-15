@@ -11,6 +11,7 @@ body {
   max-width: 1040px;
   width: 100%;
   margin : 0 auto;
+  padding: 0 10px;
 }
 
 .wrap-form {
@@ -24,7 +25,23 @@ body {
 }
 
 .success {
-  color:
+  color: #53A338;
+}
+
+.er404{
+  margin: 120px 30px;
+  font-size: 1.3em;
+}
+
+.maj {
+  text-transform: uppercase;
+  text-decoration: underline;
+  padding-bottom: 8px;
+}
+
+.er404 .maj {
+    display: block;
+    font-size: 2em;
 }
 
  #header {
@@ -235,18 +252,27 @@ body {
 
 
 .liens-paramcompte {
-  width: 100%;
   margin-top: 30px;
-  text-align: center;
+  height: 50px;
+  margin-right: -2%;
 }
 
 .liens-paramcompte .lien-paracompte {
+  width: 48%;
+  margin-right: 2%;
+  text-align: center;
+  float: left;
   background-color: #1D4B8C;
   margin-top: 20px;
+  margin-bottom: 10px;
   padding: 10px 50px;
   text-decoration: none;
   color: white;
   text-transform: uppercase;
+}
+
+.liens-paramcompte .lien-paracompte:active {
+  box-shadow: 1px 1px black;
 }
 
 
@@ -324,6 +350,12 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
+.sans-margin {
+  margin-top: 0;
+  padding: 20px;
+  line-height: 1.5em;
+}
+
 textarea {
   width: 100%;
   padding: 12px 20px;
@@ -369,6 +401,7 @@ span.psw {
   background-color: #EFFBFB;
   margin-top: 20px;
   width: 100%;
+  padding-bottom: 20px;
 }
 
 #footer a {
@@ -420,6 +453,7 @@ span.psw {
       margin-top: 0;
       padding-right: 0;
     }
+  }
 
 /* formulaire */
 /* Full-width input fields */
@@ -481,5 +515,14 @@ input[type=submit].sinscrire{
 
     #header h2 {
       padding-left: 0;
+    }
+
+    .liens-paramcompte .lien-paracompte {
+      padding: 5px 10px;
+      font-size: 0.5em;
+    }
+
+    .btnConfirm {
+      font-size: 0.5em;
     }
 }
