@@ -1,7 +1,7 @@
 <?php
   include('inc/pdo.php');
   include('inc/fonction.php');
-  include('newsletter.php'); 
+  include('newsletter.php');
 ?>
 
 <?php
