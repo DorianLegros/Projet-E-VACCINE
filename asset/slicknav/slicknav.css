@@ -57,6 +57,7 @@
   .slicknav_nav ul {
     display: block; }
   .slicknav_nav li {
+    float: right;
     display: block; }
   .slicknav_nav .slicknav_arrow {
     font-size: 0.8em;

@@ -30,8 +30,8 @@
     <hr>
     <form class="connexion" action="" method="post">
       <div class="container">
-      <label for="mail">Votre email</label><input type="text" name="mail" value="<?php if(!empty($_POST['mail'])){ echo $_POST['mail']; } ?>"><?php if(!empty($errors['mail'])) { echo '<p class="error">' . $errors['mail'] . '</p>'; } ?>
-      <label for="texte">Votre texte</label><textarea name="texte" rows="8" cols="80"><?php if(!empty($_POST['texte'])){echo $_POST['texte'];} ?></textarea><?php if(!empty($errors['texte'])) { echo '<p class="error">' . $errors['texte'] . '</p>'; } ?>
+      <label for="mail">Votre email</label><input type="text" name="mail" placeholder="Votre email..."   value="<?php if(!empty($_POST['mail'])){ echo $_POST['mail']; } ?>"><?php if(!empty($errors['mail'])) { echo '<p class="error">' . $errors['mail'] . '</p>'; } ?>
+      <label for="texte">Votre texte</label><textarea name="texte" rows="8" cols="80" placeholder="Ecrivez votre message..."><?php if(!empty($_POST['texte'])){echo $_POST['texte'];} ?></textarea><?php if(!empty($errors['texte'])) { echo '<p class="error">' . $errors['texte'] . '</p>'; } ?>
 
       <input class="btnConfirm" type="submit" name="submitted" value="Envoyer">
       </div>
