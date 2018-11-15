@@ -42,6 +42,9 @@
   <div class="wrap">
 
   <form action="" class="connexion" method="post">
+    <div class="container">
+
+
     <h2>Connexion</h2>
     <div class="container">
 
@@ -60,6 +63,7 @@
 
        <span class="pswfrg"><a href="forgotten_pass.php">Mot de passe oublié?</a></span>
      </div>
+    </div>
     </div>
   </form>
 

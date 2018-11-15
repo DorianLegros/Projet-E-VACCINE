@@ -119,7 +119,7 @@ if(count($error) == 0) {
     <input type="password" placeholder="Confirmer votre mot de passe" name="mdp2" value="" >
 
     <span class="error"><?php if(!empty($error['check'])) {echo $error['check']; }  ?></span>
-    <input type="checkbox" name="check">J'ai lu et j'accepte les <a href="term.php">Terms & Conditions</a>.</input>
+    <input type="checkbox" name="check">J'ai lu et j'accepte les <a href="term.php" target="_blank">Terms & Conditions</a>.</input>
 
       <div class="containerBtn">
         <input class="btnConfirm" type="submit" name="submitted" class="connexion" value="S'inscrire"></input>

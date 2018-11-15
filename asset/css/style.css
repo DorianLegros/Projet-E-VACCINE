@@ -262,31 +262,6 @@ body {
 
 }
 
-/* carnet */
-.liens-paramcompte {
-  margin-top: 30px;
-  height: 50px;
-  margin-right: -2%;
-}
-
-.liens-paramcompte .lien-paracompte {
-  width: 48%;
-  margin-right: 2%;
-  text-align: center;
-  float: left;
-  background-color: #1D4B8C;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  padding: 10px 50px;
-  text-decoration: none;
-  color: white;
-  text-transform: uppercase;
-
-}
-
-.liens-paramcompte .lien-paracompte:active {
-  box-shadow: 1px 1px black;
-}
 
 
 /* style tableau vaccins */
@@ -418,10 +393,33 @@ span.psw {
   margin-top: 15px;
 }
 
-/* forgotten_pass */
-form {
-  padding: 35px;
+/* carnet */
+.liens-paramcompte {
+  margin-top: 30px;
+  height: 50px;
+  margin-right: -2%;
 }
+
+.liens-paramcompte .lien-paracompte {
+  width: 48%;
+  margin-right: 2%;
+  text-align: center;
+  float: left;
+  background-color: #1D4B8C;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 10px 50px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+
+}
+
+.liens-paramcompte .lien-paracompte:active {
+  box-shadow: 1px 1px black;
+}
+
+
 
 /* footer */
 #footer {
@@ -467,6 +465,20 @@ form {
 #footer .copyright{
   text-align: center;
 }
+
+/* forgotten_pass */
+form.forgotten_pass {
+
+  padding: 35px 15px 35px 15px;
+  width: 100%;
+}
+
+.numlotemail {
+  width: 60%;
+  margin-left: 20%;
+}
+
+
 
 
 /* Change styles for span and cancel button on extra small screens */

@@ -34,13 +34,20 @@ if(!empty($_POST['submitted'])) {
 
 
 <?php include('inc/header.php'); ?>
-
+<div class="wrap">
 <form class="forgotten_pass" action="" method="post">
-    <span class="error"><?php if(!empty($error['email'])) {echo $error['email']; } ?></span>
-    <input type="text" name="email" placeholder="email *" value="<?php if(!empty($_POST['email'])) {echo $_POST['email']; } ?>">
 
-    <div class="containerBtn">
-      <input class="btnConfirm" type="submit" name="submitted" value="Modifier votre mot de passe">
+
+    <div class="numlotemail">
+
+
+    <label for="Email">Email</label>
+    <span class="error"><?php if(!empty($error['email'])) {echo $error['email']; } ?></span>
+    <input type="text" name="email" placeholder="Email *" class="" value="<?php if(!empty($_POST['email'])) {echo $_POST['email']; } ?>">
+
+      <div class="containerBtn">
+        <input class="btnConfirm" type="submit" name="submitted" value="Modifier votre mot de passe">
+      </div>
     </div>
 </form>
 
