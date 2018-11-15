@@ -57,15 +57,15 @@ else {
           <?php } ?>
           <form class="" action="" method="post">
             <ul>
-              <li><label for="nomvac">Nom: </label><input type="text" name="nomvac" value="<?php if(!empty($_POST['nomvac'])) {echo $_POST['nomvac']; } else { echo $vaccin['nomvaccin']; } ?>"> <div class="erreur"><?php if (!empty($errors['nomvac'])) { echo $errors['nomvac']; } ?> </div></li>
-              <li><label for="descvac">Description: </label><textarea name="descvac" rows="8" cols="80"><?php if(!empty($_POST['descvac'])) {echo $_POST['descvac']; } else { echo $vaccin['description']; } ?></textarea> <div class="erreur"><?php if (!empty($errors['descvac'])) { echo $errors['descvac']; } ?></div></li>
+              <li><label for="nomvac">Nom: </label><input class="form-control" type="text" name="nomvac" value="<?php if(!empty($_POST['nomvac'])) {echo $_POST['nomvac']; } else { echo $vaccin['nomvaccin']; } ?>"> <div class="text-danger"><?php if (!empty($errors['nomvac'])) { echo $errors['nomvac']; } ?> </div></li>
+              <li><label for="descvac">Description: </label><textarea class="form-control" name="descvac" rows="8" cols="80"><?php if(!empty($_POST['descvac'])) {echo $_POST['descvac']; } else { echo $vaccin['description']; } ?></textarea> <div class="text-danger"><?php if (!empty($errors['descvac'])) { echo $errors['descvac']; } ?></div></li>
               <li><label for="importancevac">Importance</label>
-              <select class="" name="importancevac">
+              <select class="form-control" name="importancevac">
                 <option value="facultatif">Facultatif</option>
                 <option value="recommandé">Recommandé</option>
                 <option value="obligatoire">Obligatoire</option>
               </select>
-              <li><input type="submit" name="submitted" value="Valider"> </li>
+              <li><input class="btn btn-primary" type="submit" name="submitted" value="Valider"> </li>
             </ul>
           </form>
         </div>

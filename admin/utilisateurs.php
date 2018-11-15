@@ -18,7 +18,7 @@ $tableUsers = $query -> fetchAll();
                 <h1 class="page-header">Liste des utilisateurs</h1>
             </div>
             <!-- /.col-lg-12 -->
-            <table class="table">
+            <table class="table panel panel-default">
               <tr>
                 <th>User</th>
                 <th>Email</th>
@@ -26,7 +26,8 @@ $tableUsers = $query -> fetchAll();
                 <th>Membre depuis</th>
               </tr>
             <?php
-            foreach ($tableUsers as $tableUser) { ?>
+            foreach ($tableUsers as $tableUser) {
+              if($tableUser['id'] != 2){ ?>
               <tr>
                 <td><?= $tableUser['login']; ?></td>
                 <td><?= $tableUser['email']; ?></td>
@@ -35,7 +36,8 @@ $tableUsers = $query -> fetchAll();
                 <td><a href="modifuser.php?id=<?= $tableUser['id']; ?>">Modifier</a></td>
                 <td><a href="suppruser.php?id=<?= $tableUser['id']; ?>">Supprimer</a></td>
               </tr>
-            <?php } ?>
+              <?php }
+              } ?>
             </table>
         </div>
         <!-- /.row -->

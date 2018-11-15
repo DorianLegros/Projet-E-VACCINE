@@ -46,17 +46,17 @@ else {
     <div class="container-fluid">
         <div class="row">
           <?php if (!empty($_POST['submitted']) && count($errors) == 0) { ?>
-            <p class="ajout-valide">Votre utilisateur a bien été modifié ! </p>
+            <p class="text-success">Votre utilisateur a bien été modifié ! </p>
           <?php } ?>
           <form class="" action="" method="post">
             <ul>
-              <p>Utilisateur: <?= $verifId['login']; ?> </p>
-              <select class="" name="role">
+              <p class="alert alert-info">Utilisateur: <?= $verifId['login']; ?> </p>
+              <select class="form-control" name="role">
                 <option value="admin">Admin</option>
                 <option value="user" selected="selected">User</option>
               </select>
-              <p>Attention ! n'attribuez pas le rôle admin à n'importe qui !</p>
-              <li><input type="submit" name="submitted" value="Valider"></li>
+              <p class="text-danger">Attention ! n'attribuez pas le rôle admin à n'importe qui !</p>
+              <li><input class="btn btn-primary" type="submit" name="submitted" value="Valider"></li>
             </ul>
           </form>
         </div>
