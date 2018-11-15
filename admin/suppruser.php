@@ -4,7 +4,7 @@
 <?php
 if (!empty($_GET['id']) && is_numeric($_GET['id']) && $_GET['id'] != 2) {
     $id = $_GET['id'];
-    $sql = "SELECT id FROM v2_user WHERE id = $id";
+    $sql = "SELECT * FROM v2_user WHERE id = $id";
     $query = $pdo -> prepare($sql);
     $query -> execute();
     $verifId = $query -> fetch();
@@ -14,7 +14,9 @@ if (!empty($_GET['id']) && is_numeric($_GET['id']) && $_GET['id'] != 2) {
         $query = $pdo -> prepare($sql);
         $query -> execute();
       }
-      //header('Location: index_back.php');      //retourne à la page d'accueil
+      if (!empty($_POST['cancel'])){
+        header('Location: utilisateurs.php');
+      }
     }
     else {
       header('Location: ../404.php');
@@ -31,8 +33,10 @@ else {
         <div class="row">
           <?php if (empty($_POST['submitted'])) { ?>
             <form class="" action="" method="post">
-              <p>Etes-vous bien sûr de vouloir supprimer cet utilisateur ? (ce choix est irréversible)</p>
-              <input type="submit" name="submitted" value="OUI">
+              <p class="alert alert-info">Utilisateur: <?= $verifId['login']; ?> </p>
+              <p class="text-danger">Etes-vous bien sûr de vouloir supprimer cet utilisateur ? (ce choix est irréversible)</p>
+              <input class="btn btn-primary" type="submit" name="submitted" value="OUI">
+              <input class="btn btn-danger" type="submit" name="cancel" value="NON">
             </form>
           <?php } ?>
           <?php if (!empty($_POST['submitted'])) { ?>

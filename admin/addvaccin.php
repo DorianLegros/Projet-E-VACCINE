@@ -38,19 +38,19 @@
     <div class="container-fluid">
         <div class="row">
           <?php if (!empty($_POST['submitted']) && count($errors) == 0) { ?>
-            <p class="ajout-valide">Votre vaccin a bien été ajouté à la liste</p>
+            <p class="text-success">Votre vaccin a bien été ajouté à la liste</p>
           <?php } ?>
 
           <form class="" action="" method="post">
             <ul>
-              <li><label for="nomvac">Nom: </label><input type="text" name="nomvac" value="<?php if(!empty($_POST['nomvac'])){echo $_POST['nomvac'];} ?>"> <div class="erreur"><?php if (!empty($errors['nomvac'])) { echo $errors['nomvac']; } ?> </div></li>
-              <li><label for="descvac">Description: </label><textarea name="descvac" rows="8" cols="80"><?php if(!empty($_POST['descvac'])){echo $_POST['descvac'];} ?></textarea> <div class="erreur"><?php if (!empty($errors['descvac'])) { echo $errors['descvac']; } ?></div></li>
-              <li><label for="importancevac">Importance</label><select class="" name="importancevac">
+              <li><label for="nomvac">Nom: </label><input class="form-control" type="text" name="nomvac" value="<?php if(!empty($_POST['nomvac'])){echo $_POST['nomvac'];} ?>"> <div class="text-danger"><?php if (!empty($errors['nomvac'])) { echo $errors['nomvac']; } ?> </div></li>
+              <li><label for="descvac">Description: </label><textarea class="form-control" name="descvac" rows="8" cols="80"><?php if(!empty($_POST['descvac'])){echo $_POST['descvac'];} ?></textarea> <div class="text-danger"><?php if (!empty($errors['descvac'])) { echo $errors['descvac']; } ?></div></li>
+              <li><label for="importancevac">Importance</label><select class="form-control" name="importancevac">
                 <option value="facultatif">Facultatif</option>
                 <option value="recommandé">Recommandé</option>
                 <option value="obligatoire">Obligatoire</option>
-              </select> <div class="erreur"><?php if (!empty($errors['auteur'])) { echo $errors['auteur']; } ?> </div></li>
-              <li><input type="submit" name="submitted" value="Valider"> </li>
+              </select>
+              <li><input class="btn btn-primary" type="submit" name="submitted" value="Valider"> </li>
             </ul>
           </form>
         </div>

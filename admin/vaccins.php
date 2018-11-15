@@ -16,7 +16,7 @@ $tableVaccins = getAllvaccins();
                 <h1 class="page-header">Liste des vaccins</h1>
             </div>
             <!-- /.col-lg-12 -->
-            <table class="table">
+            <table class="table panel panel-default">
               <tr>
                 <th>Nom du vaccin</th>
                 <th>Description</th>

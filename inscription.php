@@ -1,5 +1,6 @@
 <?php include('inc/pdo.php'); ?>
 <?php include('inc/fonction.php'); ?>
+<?php include('newsletter.php') ?>
 <?php
 $error = array();
 $success = false;

@@ -1,38 +1,13 @@
 <?php include('inc/pdo.php'); ?>
 <?php include('inc/fonction.php'); ?>
+<?php include('inc/request.php'); ?>
+<?php include('newsletter.php') ?>
 <?php
 
-$error = array();
-
 
 if (isLogged()){
- $id = $_SESSION['user']['id'];
- if (!empty($_POST['submitted'])) {
-    // securite XSS
-    $age = trim(strip_tags($_POST['age']));
-   //verif age
-    $sql = "SELECT age FROM v2_user WHERE id=:id";
-    $query = $pdo -> prepare($sql);
-    $query -> execute();
-    $user = $query -> fetch();
-
-      if(count($error) == 0){
-        $sql = "INSERT INTO v2_user (age, updated_at) VALUES ('$age', NOW())";
-              $query = $pdo->prepare($sql);
-              $query->bindValue(':login',$age,PDO::PARAM_STR);
-              $query->execute();
-      }
-  }
-}
-
-if (isLogged()){
-   $id = $_SESSION['user']['id'];
- //requette pour récupérer les Informations de l'utilisateur
-   $sql = "SELECT * FROM v2_user WHERE id = :id ";
-   $query = $pdo -> prepare($sql);
-   $query->bindValue(':id',$id,PDO::PARAM_STR);
-   $query -> execute();
-   $user = $query -> fetch();
+  //fonction pour récupérer les informations de l'utilisateurs
+  $user = getUser();
 
 }else{
   header('Location: 404.php');
@@ -74,9 +49,5 @@ if (isLogged()){
   </table>
  <a href="modification.php">Modifier mon mot de passe</a>
 </div>
-
-
-
-
 
 <?php include('inc/footer.php'); ?>

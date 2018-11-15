@@ -1,8 +1,9 @@
+<?php include('newsletter.php') ?>
 <footer id=footer>
   <div class="wrap">
 
     <div class="sectionx div1">
-      <h3>Service client</h3>
+      <h3>Liens utiles</h3>
       <ul>
         <li><a href="">Nous contacter</a></li>
         <li><a href="">Besoin d'aide</a></li>
@@ -19,6 +20,18 @@
         <li><a href="index.php">https://www.e-vaccine.fr</a></li>
       </ul>
     </div>
+
+    <form class="sectionx" action="" method="post">
+       <div class="label">
+         <label>RECEVEZ NOTRE NEWSLETTER</label>
+       </div>
+      <div class="champ">
+        <p>Inscrivez-vous pour recevoir nos acctualités</p>
+        <span class="error"><?php if(!empty($erreur['email'])) {echo $erreur['email']; }  ?></span>
+        <input type="text" placeholder="exemple@gmail.com" name="newsletter" value="<?php if(!empty($_POST['email'])) { echo $_POST['email']; } ?>">
+       <input type="submit" name="newsletterform" value="S'inscrire">
+      </div>
+   </form>
 
 
     <div class="clear"></div>

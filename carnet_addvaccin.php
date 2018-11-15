@@ -1,36 +1,20 @@
 <?php
   include('inc/pdo.php');
   include('inc/fonction.php');
+  include('inc/request.php');
+  include('newsletter.php');
 ?>
-
 <?php
-  $sql = "SELECT nomvaccin FROM v2_vaccins WHERE 1=1";
-  $query = $pdo -> prepare($sql);
-  $query -> execute();
-  $listeVaccins = $query -> fetchAll();
- ?>
-
-<?php
-
+  $listeVaccins = getVaccin() ;
   if(isLogged()) {
-      $iduser = $_SESSION['user']['id'];
+
       if (!empty($_POST['submitted'])) {
         //sécurité XSS
         $numeroLot = trim(strip_tags($_POST['numlot']));
         $datevaccin = trim(strip_tags($_POST['date']));
 
-        $rappelvaccin = $_POST['rappel'];
-        $nomVaccin = $_POST['nom'];
-
-        $sql = "SELECT id FROM v2_vaccins WHERE nomvaccin='$nomVaccin'";
-        $query = $pdo -> prepare($sql);
-        $query -> execute();
-        $idVaccins = $query -> fetch();
-        $idvaccin = $idVaccins['id'];
-
         $errors = array();
-
-        if (!empty($datevaccin)) {
+       if (!empty($datevaccin)) {
         } else {
           $errors['date'] = 'Veulliez remplir ce champ.';
         }
@@ -42,11 +26,7 @@
         }
 
         if (count($errors) == 0) {
-          $sql = "INSERT INTO v2_carnets (datevaccin, rappelvaccin, etat, id_user, id_vaccins, num_lot, created_at)
-          VALUES ('$datevaccin', '$rappelvaccin', 'pasfait', '$iduser', '$idvaccin', :Numlot, NOW())";
-          $query = $pdo -> prepare($sql);
-          $query -> bindValue(':Numlot', $numeroLot, PDO::PARAM_STR);
-          $query -> execute();
+          addVaccin();
           header('Location: carnet.php');
         }
       }
