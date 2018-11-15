@@ -35,15 +35,16 @@ body {
 #header .logo img {
   width: 120px;
   height: 120px;
-  margin-right: 20px;
+  margin-right: 200px;
   float: left;
 }
 #header .logo img:hover {
   transform: rotate(5deg) scale(.9);
 }
 #header .titre {
-  float: right;
-  padding-right: 200px;
+  float: left;
+  margin-left: 10px;
+
 }
 
 #header h1 {
@@ -231,6 +232,16 @@ body {
 
 #contenu .voyage .text-voyage p {
   margin: 10px 0;
+}
+#contenu .espace {
+  line-height: 1.7;
+  padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+#contenu .top {
+  margin-top: 60px;
+
 }
 
 /* carnet */
