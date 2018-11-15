@@ -235,11 +235,12 @@ body {
   margin: 10px 0;
 }
 
-
+/* carnet */
 .liens-paramcompte {
   width: 100%;
   margin-top: 30px;
   text-align: center;
+
 }
 
 .liens-paramcompte .lien-paracompte {
@@ -249,6 +250,7 @@ body {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
+
 }
 
 
@@ -337,7 +339,16 @@ textarea {
   box-sizing: border-box;
 }
 
+/* profil */
 
+a.modifmdp{
+  font-size: .9em;
+
+}
+
+td.paraC{
+padding-top: 70px;
+}
 .container  {
     padding: 16px;
 }
@@ -363,6 +374,12 @@ span.psw {
 
 .containerBtn {
   text-align: center;
+  margin-top: 15px;
+}
+
+/* forgotten_pass */
+form {
+  padding: 35px;
 }
 
 /* footer */

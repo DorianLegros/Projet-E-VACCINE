@@ -55,9 +55,10 @@
 .slicknav_nav {
   clear: both; }
   .slicknav_nav ul {
-    display: block; }
+    display: block;
+  float: right;}
   .slicknav_nav li {
-    float: right;
+    float: left;
     display: block; }
   .slicknav_nav .slicknav_arrow {
     font-size: 0.8em;
