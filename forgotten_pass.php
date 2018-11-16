@@ -24,7 +24,6 @@ if(!empty($_POST['submitted'])) {
             $query -> bindValue('email', $email, PDO::PARAM_STR);
             $query -> execute();
             $user = $query -> fetch();
-            debug($user);
         if(!empty($user)) {
           //envoi d'un mail avec reinitialisation du mdp
           echo '<p>Veuillez cliquer sur le lien ci-dessous</p>';
@@ -56,6 +55,7 @@ if(!empty($_POST['submitted'])) {
       </div>
     </div>
 </form>
+</div>
 
 
 

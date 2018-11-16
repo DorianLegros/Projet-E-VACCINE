@@ -74,7 +74,7 @@ header('Location: 403.php');
 
   <div class="containerBtn">
     <input class="btnConfirm" type="submit" name="submitted" value="Confirmer">
-  </div
+  </div>
 </form>
 
 <?php

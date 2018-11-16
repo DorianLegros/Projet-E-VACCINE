@@ -42,7 +42,7 @@ if (!empty($_GET['email']) && !empty($_GET['token'])) {
                         $query -> bindValue(':token', $token, pdo::PARAM_STR);
                         $query -> bindValue(':id', $user ['id'], pdo::PARAM_STR);
                         $query -> execute();
-                  
+
                   // redirection
                  header('Location: connexion.php');
                 }
