@@ -53,7 +53,7 @@ else {
     <div class="container-fluid">
         <div class="row">
           <?php if (!empty($_POST['submitted']) && count($errors) == 0) { ?>
-            <p class="ajout-valide">Votre vaccin a bien été modifié</p>
+            <p class="text-success">Votre vaccin a bien été modifié</p>
           <?php } ?>
           <form class="" action="" method="post">
             <ul>
