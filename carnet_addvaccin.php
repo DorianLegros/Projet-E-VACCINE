@@ -35,35 +35,29 @@
 ?>
 
 <section id="contenu" class="wrap">
-  <form class="wrap table" action="" method="post">
+  <form class="wrap" action="" method="post">
 
-      <label for="nom">Nom du vaccin</label>
+      <label for="nom">Nom du vaccin:</label>
 
     <select  name="nom" class="numlot">
       <?php foreach ($listeVaccins as $listeVaccin) { ?>
         <option value="<?= $listeVaccin['nomvaccin']; ?>"><?= $listeVaccin['nomvaccin']; ?></option>
       <?php } ?>
     </select>
-    <div>
-       <label for="numlot">Numéro du lot</label>
-       <input class="numlot ligne" type="text" name="numlot" value="" placeholder="ex: H25994"><?php if(!empty($errors['numlot'])) { echo '<p class="error">' . $errors['numlot'] . '</p>'; } ?>
-    </div>
-    <div>
-       <label for="date">Date du vaccin</label>
-       <input class="numlot" type="date" name="date" value="" placeholder="ex: 2018-11-13"><?php if(!empty($errors['date'])) { echo '<p class="error">' . $errors['date'] . '</p>'; } ?>
-    </div>
-    <div>
-       <label for="rappel">Rappel dans</label>
-       <select class= name="rappel">
-           <option value="3 mois">3 mois</option>
-           <option value="6 mois">6 mois</option>
-           <option value="9 mois">9 mois</option>
-           <option value="1 an">1 an</option>
-           <option value="2 ans">2 ans</option>
-           <option value="3 ans">3 ans</option>
-           <option value="plusieurs années">plusieurs années</option>
-      </select>
-   </div>
+
+  <label for="numlot"class="numlot">N° du lot: </label><input  class="numlot1" type="text" name="numlot" value="" placeholder="ex: H25994" ><?php if(!empty($errors['numlot'])) { echo '<p class="error">' . $errors['numlot'] . '</p>'; } ?>
+    <label for="date">Date du vaccin: </label><input class="numlot" type="date" name="date" value="" placeholder="ex: 2018-11-13"><?php if(!empty($errors['date'])) { echo '<p class="error">' . $errors['date'] . '</p>'; } ?>
+    <label for="rappel">Rappel dans: </label><select class="numlot" name="rappel">
+      <option value="pas de rappel">Pas de rappel</option>
+      <option value="3 mois">3 mois</option>
+      <option value="6 mois">6 mois</option>
+      <option value="9 mois">9 mois</option>
+      <option value="1 an">1 an</option>
+      <option value="2 ans">2 ans</option>
+      <option value="3 ans">3 ans</option>
+      <option value="plusieurs années">plusieurs années</option>
+    </select>
+
     <input class="btnConfirm"  type="submit" name="submitted" value="Ajouter">
   </form>
 </section>

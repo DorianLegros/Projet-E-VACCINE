@@ -6,6 +6,6 @@
 
 <?php include('inc/header.php'); ?>
 
-<p>Erreur 404, la page que vous cherchez n'a pas été trouvé !</p>
+<p class="er404"><span class="maj">Erreur 404</span> la page que vous cherchez semble introuvable.</p>
 
 <?php include('inc/footer.php'); ?>

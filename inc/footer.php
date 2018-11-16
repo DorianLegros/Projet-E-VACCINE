@@ -1,12 +1,12 @@
-<?php include('newsletter.php') ?>
+<?php include('newsletter.php'); ?>
 <footer id=footer>
   <div class="wrap">
     <div class="sectionx div1">
       <h3>Liens utiles</h3>
       <ul>
         <li><a href="">Nous contacter</a></li>
-        <li><a href="">Besoin d'aide</a></li>
-        <li><a href="">FAQ</a></li>
+        <li><a href="vaccins.php">Listes des vaccins</a></li>
+        <li><a href="https://www.santemagazine.fr/actualites">actualités santé</a></li>
       </ul>
     </div>
 
@@ -22,7 +22,7 @@
 
     <form class="sectionx" action="" method="post">
        <div class="label">
-         <label>RECEVEZ NOTRE NEWSLETTER</label>
+         <h3>RECEVEZ NOTRE NEWSLETTER</h3>
        </div>
       <div class="champ">
         <p>Inscrivez-vous pour recevoir nos actualités</p>

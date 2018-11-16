@@ -11,7 +11,7 @@ body {
   max-width: 1040px;
   width: 100%;
   margin : 0 auto;
-  padding: 20px;
+  padding: 0 10px;
 }
 
 .wrap-form {
@@ -26,7 +26,23 @@ body {
 }
 
 .success {
-  color:
+  color: #53A338;
+}
+
+.er404{
+  margin: 120px 30px;
+  font-size: 1.3em;
+}
+
+.maj {
+  text-transform: uppercase;
+  text-decoration: underline;
+  padding-bottom: 8px;
+}
+
+.er404 .maj {
+    display: block;
+    font-size: 2em;
 }
 
  #header {
@@ -38,15 +54,16 @@ body {
 #header .logo img {
   width: 120px;
   height: 120px;
-  margin-right: 20px;
+  margin-right: 200px;
   float: left;
 }
 #header .logo img:hover {
   transform: rotate(5deg) scale(.9);
 }
 #header .titre {
-  float: right;
-  padding-right: 200px;
+  float: left;
+  margin-left: 10px;
+
 }
 
 #header h1 {
@@ -235,23 +252,41 @@ body {
 #contenu .voyage .text-voyage p {
   margin: 10px 0;
 }
+#contenu .espace {
+  line-height: 1.7;
+  padding: 10px 0;
+    margin-bottom: 30px;
+}
 
-/* carnet */
-.liens-paramcompte {
-  width: 100%;
-  margin-top: 30px;
-  text-align: center;
+#contenu .top {
+  margin-top: 60px;
 
 }
 
+/* carnet */
+.liens-paramcompte {
+  margin-top: 30px;
+  height: 50px;
+  margin-right: -2%;
+}
+
 .liens-paramcompte .lien-paracompte {
+  width: 48%;
+  margin-right: 2%;
+  text-align: center;
+  float: left;
   background-color: #1D4B8C;
   margin-top: 20px;
+  margin-bottom: 10px;
   padding: 10px 50px;
   text-decoration: none;
   color: white;
   text-transform: uppercase;
 
+}
+
+.liens-paramcompte .lien-paracompte:active {
+  box-shadow: 1px 1px black;
 }
 
 
@@ -318,7 +353,7 @@ table.table td {
 /* vaccins */
 
 
-form {border:3px solid #ccc;  margin-top:50px;margin-bottom: 50px;border-radius: 10px; width:100%;}
+form {border:3px solid #ccc;  margin-top:60px; padding-top: 30px; margin-bottom: 50px;border-radius: 10px; width:100%;}
 h2 {text-align: center; padding-top: 10px; font-weight: bold; font-size: 1.3em;}
 input[type=text], input[type=password] {
     width: 100%;
@@ -328,6 +363,12 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: radius 1px solid #ccc;
     box-sizing: border-box;
+}
+
+.sans-margin {
+  margin-top: 0;
+  padding: 20px;
+  line-height: 1.5em;
 }
 
 textarea {
@@ -341,7 +382,6 @@ textarea {
 }
 
 /* profil */
-
 a.modifmdp{
   font-size: .9em;
 
@@ -383,19 +423,23 @@ form {
   padding: 35px;
 }
 .numlot {
-  max-width: 150px;
-  height: 15px;
-  margin-left: 30px;
+  width: 150px;
+  height: 20px;
+  margin-left: 10px;
 }
-.ligne{
-  padding-bottom: 20px;
+input.numlot1 {
+  width: 150px;
+  height: 20px;
+  margin-left: 10px;
 }
+
 
 /* footer */
 #footer {
   background-color: #EFFBFB;
   margin-top: 20px;
   width: 100%;
+  padding-bottom: 20px;
 }
 
 #footer a {
@@ -447,6 +491,7 @@ form {
       margin-top: 0;
       padding-right: 0;
     }
+  }
 
 /* formulaire */
 /* Full-width input fields */
@@ -473,6 +518,8 @@ input[type=submit].sinscrire{
   width: 10%;
   margin-bottom: 20px;
 }
+
+
 /* Add padding to container elements */
 .container {
     padding: 16px;
@@ -508,5 +555,14 @@ input[type=submit].sinscrire{
 
     #header h2 {
       padding-left: 0;
+    }
+
+    .liens-paramcompte .lien-paracompte {
+      padding: 5px 10px;
+      font-size: 0.5em;
+    }
+
+    .btnConfirm {
+      font-size: 0.5em;
     }
 }

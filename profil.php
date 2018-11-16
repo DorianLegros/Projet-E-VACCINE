@@ -1,7 +1,7 @@
 <?php include('inc/pdo.php'); ?>
 <?php include('inc/fonction.php'); ?>
 <?php include('inc/request.php'); ?>
-<?php include('newsletter.php') ?>
+<?php include('newsletter.php'); ?>
 <?php
 
 
@@ -15,16 +15,19 @@ if (isLogged()){
  ?>
 <?php include('inc/header.php'); ?>
 <div class="wrap">
-
-
   <div class="liens-paramcompte">
-    <a class="lien-paracompte" href="carnet.php">Mon Carnet</a>
+    <a class="lien-paracompte" href="carnet.php">Carnet</a>
     <a class="lien-paracompte" href="profil.php">Paramètres</a>
   </div>
+  <div class="clear">
+
+  </div>
+  <form class="sans-margin" action="" method="post">
   <table>
     <tr>
-      <td class="paraC">Paramètres du compte</td>
+      <td class="maj">Paramètres du compte</td>
     </tr>
+
     <tr>
       <td>Login:</td>
       <td><?php echo $user['login']; ?></td>

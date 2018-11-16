@@ -18,7 +18,13 @@ if(!empty($_POST['submitted'])) {
       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $error['email'] = 'Veuillez saisir un email valide.';
       } else{
-        $user = getForgotten();
+
+        $sql="SELECT email, token FROM v2_user WHERE email= :email";
+            $query = $pdo -> prepare($sql);
+            $query -> bindValue('email', $email, PDO::PARAM_STR);
+            $query -> execute();
+            $user = $query -> fetch();
+            debug($user);
         if(!empty($user)) {
           //envoi d'un mail avec reinitialisation du mdp
           echo '<p>Veuillez cliquer sur le lien ci-dessous</p>';

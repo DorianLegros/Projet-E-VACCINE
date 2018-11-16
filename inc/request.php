@@ -33,29 +33,7 @@ $sql = "SELECT * FROM v2_user WHERE id =:id ";
       $user = $query -> fetch();
       return $user;
 }
-//fonction pour récupérer l'utilisateur d'un email
-function getModifPass(){
-  global $pdo;
-  $sql = "SELECT * FROM v2_user WHERE token=:token AND email=:email";
-        $query = $pdo -> prepare($sql);
-        $query -> bindValue(':email', urldecode($_GET['email']), pdo::PARAM_STR);
-        $query -> bindValue(':token', urldecode($_GET['token']), pdo::PARAM_STR);
-        $query -> execute();
-        $user = $query->fetch();
-        return $user;
-}
-//fonction pour modifier le mot de passe
-function getUpdate(){
-  global $pdo;
-  $hash = password_hash(trim(strip_tags($_POST['mdp'])),PASSWORD_DEFAULT);
-  $token = generateRandomString(120);
-  $sql = "UPDATE v2_user SET mdp=:mdp, token=:token WHERE id=:id";
-        $query = $pdo -> prepare($sql);
-        $query -> bindValue(':mdp',$hash,PDO::PARAM_STR);
-        $query -> bindValue(':token', $token, pdo::PARAM_STR);
-        $query -> bindValue(':id', $user ['id'], pdo::PARAM_STR);
-        $query -> execute();
-}
+
 //fonction de connexion
 function getConnexion(){
   global $pdo;
@@ -66,17 +44,6 @@ function getConnexion(){
         $query -> execute();
   $user = $query -> fetch();
   return $user;
-}
-//fonction pour le mot de passe oublié
-function getForgotten(){
-  global $pdo;
-  $email = trim(strip_tags($_POST['email']));
-  $sql="SELECT email, token FROM v2_user WHERE email= :email";
-      $query = $pdo -> prepare($sql);
-      $query -> bindValue('email', $email, PDO::PARAM_STR);
-      $query -> execute();
-      $user = $query -> fetch();
-      return $user;
 }
 //fonction pour récupérer id user
 function getVerifIdUser()
