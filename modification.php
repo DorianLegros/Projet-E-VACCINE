@@ -60,7 +60,7 @@ header('Location: 403.php');
 
 
 <form class="wrap" action="" method="post">
-  <label for="">Votre ancien mot de passe</label>
+  <label for="ancienmdp">Votre ancien mot de passe</label>
   <span class="error"><?php if(!empty($error['mdp'])) {echo $error['mdp']; } ?></span>
   <input type="password" name="mdp" placeholder="Ancien mot de passe..." value="">
 
@@ -74,11 +74,11 @@ header('Location: 403.php');
 
   <div class="containerBtn">
     <input class="btnConfirm" type="submit" name="submitted" value="Confirmer">
-  </div
+  </div>
 </form>
 
 <?php
 
 
 
-include('inc/footer.php'); ?>
+include('inc/footer.php'); 

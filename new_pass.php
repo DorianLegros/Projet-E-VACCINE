@@ -42,7 +42,7 @@ if (!empty($_GET['email']) && !empty($_GET['token'])) {
                         $query -> bindValue(':token', $token, pdo::PARAM_STR);
                         $query -> bindValue(':id', $user ['id'], pdo::PARAM_STR);
                         $query -> execute();
-                  
+
                   // redirection
                  header('Location: connexion.php');
                 }
@@ -65,8 +65,9 @@ if (!empty($_GET['email']) && !empty($_GET['token'])) {
 
   <label for="">Confirmer votre nouveau mot de passe *</label>
   <input type="password" name="mdp2" value="">
-
+<div class="containerBtn">
   <input class="btnConfirm" type="submit" name="submitted" value="Confirmer">
+  </div>
 </form>
 
-<?php include('inc/footer.php'); ?>
+<?php include('inc/footer.php'); 

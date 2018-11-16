@@ -397,8 +397,18 @@ span.psw {
 }
 
 .containerBtn {
-  text-align: center;
+   text-align: center;
   margin-top: 15px;
+}
+.containerBtn .btnConfirm{
+  /* margin: 0 auto;display: block; */
+}
+.containerBtn .btnConfirm2{
+  background-color: lime;
+}
+
+form.wrap{
+  padding: 40px;
 }
 
 /* carnet */
@@ -420,6 +430,7 @@ span.psw {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
+  margin-bottom: 30px;
 
 }
 
