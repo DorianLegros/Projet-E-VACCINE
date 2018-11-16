@@ -35,7 +35,7 @@
 ?>
 
 <section id="contenu" class="wrap">
-  <form class="wrap" action="" method="post">
+  <form class="wrap " action="" method="post" >
 
       <label for="nom">Nom du vaccin:</label>
 
@@ -45,7 +45,7 @@
       <?php } ?>
     </select>
 
-  <label for="numlot"class="numlot">N° du lot: </label><input  class="numlot1" type="text" name="numlot" value="" placeholder="ex: H25994" ><?php if(!empty($errors['numlot'])) { echo '<p class="error">' . $errors['numlot'] . '</p>'; } ?>
+  <label for="numlot" class="numlot">N° du lot: </label><input  class="numlot1" type="text" name="numlot" value="" placeholder="ex: H25994" ><?php if(!empty($errors['numlot'])) { echo '<p class="error">' . $errors['numlot'] . '</p>'; } ?>
     <label for="date">Date du vaccin: </label><input class="numlot" type="date" name="date" value="" placeholder="ex: 2018-11-13"><?php if(!empty($errors['date'])) { echo '<p class="error">' . $errors['date'] . '</p>'; } ?>
     <label for="rappel">Rappel dans: </label><select class="numlot" name="rappel">
       <option value="pas de rappel">Pas de rappel</option>

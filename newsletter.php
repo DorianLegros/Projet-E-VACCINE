@@ -10,7 +10,6 @@ if(!empty($_POST['newsletterform'])){
            $query->execute();
            $ipexist = $query->fetch();
 
-                  if($ipexist == 0) {
                      $sql = "SELECT * FROM v2_newsletter WHERE email = :email";
                      $query = $pdo ->prepare($sql);
                      $query->bindValue(':email',$email,PDO::PARAM_STR);
@@ -26,9 +25,7 @@ if(!empty($_POST['newsletterform'])){
                      } else {
                         $erreur['email'] = "Vous êtes déjà inscrit à la Newsletter..";
                      }
-                  } else {
-                     $erreur['email'] = "Vous êtes déjà inscrit à la Newsletter(adresse ip existante)";
-                  }
+
          } else {
             $erreur['email'] = "Vous devez indiquer une adresse e-mail..";
          }
