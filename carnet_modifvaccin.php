@@ -53,9 +53,9 @@
 
 <section id="contenu">
   <form class="wrap" action="" method="post">
-    <label for="numlot">Numéro du lot</label><input type="text" name="numlot" value="<?php if(!empty($_POST['numlot'])) {echo $_POST['numlot']; } else { echo $carnet['num_lot']; } ?>" placeholder="ex: H25994"><?php if(!empty($errors['numlot'])) { echo '<p class="error">' . $errors['numlot'] . '</p>'; } ?>
-    <label for="date">Date du vaccin</label><input type="date" name="date" value="<?php if(!empty($_POST['date'])) {echo $_POST['date']; } else { echo $carnet['datevaccin']; } ?>" placeholder="ex: 2018-11-13"><?php if(!empty($errors['date'])) { echo '<p class="error">' . $errors['date'] . '</p>'; } ?>
-    <label for="rappel">Rappel dans</label>
+    <label for="numlot" class="numlot">Numéro du lot</label><input class="numlot1" type="text" name="numlot" value="<?php if(!empty($_POST['numlot'])) {echo $_POST['numlot']; } else { echo $carnet['num_lot']; } ?>" placeholder="ex: H25994"><?php if(!empty($errors['numlot'])) { echo '<p class="error">' . $errors['numlot'] . '</p>'; } ?>
+    <label for="date" class="numlot">Date du vaccin</label><input class="numlot" type="date" name="date" value="<?php if(!empty($_POST['date'])) {echo $_POST['date']; } else { echo $carnet['datevaccin']; } ?>" placeholder="ex: 2018-11-13"><?php if(!empty($errors['date'])) { echo '<p class="error">' . $errors['date'] . '</p>'; } ?>
+    <label for="rappel" class="numlot">Rappel dans</label>
 
     <?php $rappppel = array(
       'pas de rappel' => 'Pas de rappel',

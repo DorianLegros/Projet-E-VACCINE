@@ -4,9 +4,9 @@
     <div class="sectionx div1">
       <h3>Liens utiles</h3>
       <ul>
-        <li><a href="">Nous contacter</a></li>
+        <li><a href="infos.php">Nous contacter</a></li>
         <li><a href="vaccins.php">Listes des vaccins</a></li>
-        <li><a href="https://www.santemagazine.fr/actualites">actualités santé</a></li>
+        <li><a href="https://www.santemagazine.fr/actualites">Actualités santé</a></li>
       </ul>
     </div>
 
