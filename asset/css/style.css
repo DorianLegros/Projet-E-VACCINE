@@ -407,6 +407,11 @@ span.psw {
   background-color: lime;
 }
 
+.center {
+  text-align: center;
+
+}
+
 form.wrap{
   padding: 40px;
 }

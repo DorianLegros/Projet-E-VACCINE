@@ -35,9 +35,17 @@ else {
 <div class="wrap">
           <?php if (empty($_POST['submitted'])) { ?>
             <form class="" action="" method="post">
+              <div class="center">
+
+
               <p><span class="error">Attention</span> ! Etes-vous bien sûr de vouloir supprimer ce vaccin de votre carnet ? (ce choix est irréversible)</p>
-              <input type="submit" name="submitted" value="OUI">
-              <input type="submit" name="cancel" value="NON">
+              </div>
+              <div class="containerBtn">
+
+
+              <input class="btnConfirm" type="submit" name="submitted" value="OUI">
+              <input class="btnConfirm" type="submit" name="cancel" value="NON">
+                </div>
             </form>
           <?php } ?>
 </div>
